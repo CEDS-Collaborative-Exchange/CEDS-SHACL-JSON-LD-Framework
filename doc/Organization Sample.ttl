@@ -1,0 +1,124 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##### Organization
+ceds:OrganizationShape                                                 # Use the class name followed by "Shape"
+  a sh:NodeShape ;                                                     # Use sh:NodeShape for CEDS Classes
+  sh:targetClass ceds:C200239 ;                                        # Use the target class from the CEDS Ontology    
+ 	sh:closed true ;                                                     # Set to true for closed shapes                        
+	sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;        # Ignore these properties
+  sh:property [
+    sh:path ceds:P600474 ;                                             # Use the path from the CEDS Ontology that defines the property               
+    sh:class ceds:C200241 ;                                            # Use the class from the CEDS Ontology
+    sh:name "Has Organization Calendar" ;                              # Use the element name from the CEDS Ontology
+    sh:nodeKind sh:IRI; 
+  ] ;
+  sh:property [         
+    sh:path ceds:P600502 ;                                                                      
+    sh:class ceds:OrganizationIdentifierShape ;          
+    sh:name "Has Organization Identification" ;                                                
+    sh:minCount 1 ;                                                                             
+  ] ;
+  .
+
+
+##### OrganizationCalendarShape
+ceds:OrganizationCalendarShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:C200241 ;                           # Class:OrganizationCalendar
+ 	sh:closed true ;
+	sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:P600474 ;                                # TODO: Need inverse property for Organization
+    sh:class ceds:C200239 ;
+    sh:name "Has Organization" ;
+    sh:nodeKind sh:IRI;
+  ] ;
+  sh:property [                                           
+    sh:path ceds:P000243 ;                                # Use the path from the CEDS Ontology that defines the property
+    sh:datatype xsd:string ;                              # Use the datatype from the CEDS Ontology
+    sh:name "School Year" ;                               # Use the element name from the CEDS Ontology
+    # Use the definition from the CEDS definition in the "description" field where possible
+    sh:description "The year for a reported school session. For academic years that span a calendar year this is the four digit year-end. E.g. 2013 for 2012-2013." ;
+    sh:maxCount 1 ;                                       # Example of basic validation that we should consider for all properties
+  ] ;
+  sh:property [
+    sh:path ceds:P000494 ;
+    sh:datatype xsd:string ;
+    sh:name "Calendar Code" ;
+    sh:description "A unique number assigned by a school district to a school calendar." ;
+  ] ;
+  sh:property [
+    sh:path ceds:P000495 ;
+    sh:datatype xsd:string ;
+    sh:name "Calendar Description" ;
+    sh:description "A description or identification of the calendar." ;
+    sh:maxCount 1 ;
+  ] ;
+  # Below is a link to the OrganizationCalendarDayShape defined below.  This is how you nest data in JSON-LD. This is a one-to-many relationship.
+  sh:property [
+    sh:path ceds:P600475 ;                                # Use the path from the CEDS Ontology that defines the property           
+    sh:node ceds:OrganizationCalendarDayShape ;           # Use the name of the shape defined in SHACL that defines the nested data 
+    sh:name "Has Organization Calendar Day" ;             # Use the element name from the CEDS Ontology
+  ] ;
+  # Below is a link to the OrganizationCalendarEventShape defined below.  This is how you nest data in JSON-LD. This is a one-to-many relationship.
+  sh:property [
+    sh:path ceds:P600476 ;  
+    sh:node ceds:OrganizationCalendarDayEventShape ;
+    sh:name "Has Organization Calendar Event" ;
+  ] ;
+  .
+
+
+
+# OrganizationCalendarDay
+ceds:OrganizationCalendarDayShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:C200243 ;
+ 	sh:closed true ;
+	sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:P000598 ;
+    sh:datatype xsd:string ;
+    sh:name "Alternate Day Name" ;
+    sh:description "" ;
+    sh:maxCount 1 ;
+  ] ;
+  .
+
+
+# OrganizationCalendarEvent
+ceds:OrganizationCalendarEventShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:C200244 ;
+ 	sh:closed true ;
+	sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:P001275 ;
+    sh:datatype xsd:date ;
+    sh:name "Calendar Event Date" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ceds:P001276 ;
+    sh:datatype xsd:string ;
+    sh:name "Calendar Event Day Name" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ceds:P001919 ;
+    sh:datatype xsd:time ;
+    sh:name "Start Time" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ceds:P001920 ;
+    sh:datatype xsd:time ;
+    sh:name "End Time" ;
+    sh:maxCount 1 ;
+  ] ;
+  .
