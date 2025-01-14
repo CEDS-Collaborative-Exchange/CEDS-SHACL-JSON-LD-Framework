@@ -1,0 +1,471 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ 
+ ceds:OrganizationShape a rdfs:class .
+ ceds:K12SchoolShape a rdfs:class ;
+    rdfs:subClassOf ceds:OrganizationShape .
+
+##### Organization
+ceds:OrganizationShape                                                 # Use the class name followed by "Shape"
+  a sh:NodeShape ;                                                     # Use sh:NodeShape for CEDS Classes
+  sh:targetClass ceds:Organization ;                                        # Use the target class from the CEDS Ontology  
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;        # Ignore these properties
+  sh:propery [
+    sh:path ceds:hasDataCollection ;
+    sh:node ceds:DataCollectionShape ;
+    sh:name "Has Data Collection" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ];
+  sh:property [
+    sh:path ceds:hasRecordStatus;
+    sh:node ceds:RecordStatusShape ;
+    sh:name "Has Record Status";
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ];
+    sh:propery [
+    sh:path ceds:hasOrganizationName ;
+    sh:node ceds:OrganizationNameShape ;
+    sh:name "Has Organization Name" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ];
+    sh:propery [
+    sh:path ceds:hasOrganizationIdentification ;
+    sh:node ceds:OrganizationIdentificationShape ;
+    sh:name "Has Organization Identification" ;
+    sh:minCount 1 ;
+  ];
+    sh:propery [
+    sh:path ceds:hasOrganizationRelationship ;
+    sh:node ceds:OrganizationRelationshipShape ;
+    sh:name "Has Organization Relationship" ;
+   ];
+
+    sh:propery [
+    sh:path ceds:hasOrganizationOperationalDetails ;
+    sh:node ceds:OrganizationOperatioalDetailsShape ;
+    sh:name "Has Organization Operational Details" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    ];
+    sh:propery [
+    sh:path ceds:hasLocation ;
+    sh:node ceds:LocationShape ;
+    sh:name "Has Location" ;
+     ];
+    sh:propery [
+    sh:path ceds:hasMembership ;
+    sh:node ceds:MembershipShape ;
+    sh:name "Has Membership" ;
+    sh:minCount 1 ;
+    ]
+ ;
+  .
+ 
+##### DataCollection
+ceds:DataCollectionShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:DataCollection ;                          
+sh:property [                                          
+    sh:path ceds:DataCollectionName ;                              
+    sh:datatype xsd:string ;                            
+    sh:name "Data Collection Name" ;                              
+    sh:minCount 1 ;
+    sh:maxCount 1 ;                                    
+  ] ;
+  sh:property [                                          
+    sh:path ceds:DataCollectionSchoolYear ;                              
+    sh:name "Data Collection School Year" ;                              
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:Literal ;                                      
+  ] ;
+  sh:property [                                          
+    sh:path ceds:DataCollectionAcademicSchoolYear ;                              
+    sh:name "Data Collection Academic Year" ;                              
+    sh:minCount 1 ;
+    sh:maxCount 1 ;                          
+    sh:nodeKind sh:Literal ;          
+    sh:equals ceds:DataCollectionSchoolYear ;
+  ] ;
+.
+
+#### RecordStatus
+ceds:RecordStatusShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:RecordStatus ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:RecordStatusDate ;
+    sh:datatype xsd:dateTime ;
+    sh:name "The date the record was marked with the Record Status Type." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;                                    
+  ];
+  sh:property [
+    sh:path ceds:committedByOrganization ;
+    sh:name "The organization responsible for a specific action or event in the lifecycle of a record. This property links the record to the organization that officially committed an action to the record." ;
+    sh:nodeKind sh:IRI ;
+  ];
+  sh:property [
+    sh:path ceds:RecordCreatedByPerson ;
+    sh:name "The person responsible for a specific action or event in the lifecycle of a record. This property links the record to the organization that officially committed an action to the record." ;
+    sh:nodeKind sh:IRI ;
+  ];
+  .
+  ##### OrganizationName
+ceds:OrganizationNameShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:OrganizationName ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+    sh:property [
+    sh:path ceds:NameOfInstitution ;
+    sh:datatype xsd:string ;
+    sh:name "Name of Institution" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;                                    
+];
+    sh:property [
+    sh:path ceds:ShortNameOfOrganization ;
+    sh:datatype xsd:string ;
+    sh:name "Short Name of Organization" ;
+    sh:maxLength 60;
+  ];
+.
+##### OrganizationIdentification
+ceds:OrganizationIdentificationShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:OrganizationIdentification ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:OrganizationIdentificationSystem ;
+    sh:in (
+            ceds:OrganizationIdentificationSystem_ACT
+            ceds:OrganizationIdentificationSystem_DUNS
+            ceds:OrganizationIdentificationSystem_FEIN
+            ceds:OrganizationIdentificationSystem_LEA
+            ceds:OrganizationIdentificationSystem_NCEDS
+            ceds:OrganizationIdentificationSystem_Other
+            ceds:OrganizationIdentificationSystem_OtherFederal
+            ceds:OrganizationIdentificationSystem_School
+        ) ;
+    sh:name "Organization Identification System" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+ ];
+  sh:property [
+    sh:path ceds:OrganizationIdentifier ;
+    sh:datatype xsd:string ;
+    sh:name "Organization Identifier" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  .
+  ##### OrganizationRelationship
+ceds:OrganizationRelationshipShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:OrganizationRelationship ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:hasOrganizationRelationshipSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:name "Organization Relationship Subject" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+ ];
+  sh:property [
+    sh:path ceds:hasOrganizationRelationshipObject ;
+    sh:nodeKind sh:IRI ;
+    sh:name "Organization Relationship Object" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+ ];
+   sh:property [
+    sh:path ceds:hasOrganizationRelationshipType ;
+    sh:name "Organization Relationship Type" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:in (
+        ceds:OrganizationRelationshipType_AuthorizingBody
+        ceds:OrganizationRelationshipType_OperatingBody
+        ceds:OrganizationRelationshipType_SecondaryAuthorizingBody
+        ceds:OrganizationRelationshipType_RelatedBody
+        );
+    sh:nodeKind sh:IRI ;
+ ];
+  .
+##### OrganizationOperationalDetails
+ceds:OrganizationOperationalDetailsShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:OrganizationOperationalDetails ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [   
+    sh:path ceds:OrganiztionOperationalStatus ;
+    sh:name "Organization Operational Status" ;
+    sh:in (
+      ceds:OrganiztionOperationalStatus_Active
+      ceds:OrganiztionOperationalStatus_Inactive
+    );
+    sh:nodeKind sh:IRI ;
+  ];  
+  sh:property [   
+  sh:path ceds:OperationalStatusEffectiveDate ;
+  sh:datatype xsd:date ;
+  sh:name "Operational Status Effective Date" ;
+]; 
+.
+
+ ##### Location
+ceds:LocationShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:Location ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:hasLocationAddress;
+    sh:node ceds:LocationAddressShape ;
+    sh:name "Location Address" ;
+    sh:minCount 1;
+    sh:maxCount 3;
+ ];
+ .
+ ##### LocationAddress
+ ceds:LocationAddressShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:LocationAddress ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [   
+    sh:path ceds:BuildingSiteNumber ;
+    sh:datatype xsd:string ;
+    sh:name "Building Site Number" ;
+  ];
+    sh:property [   
+    sh:path ceds:AddressApartmentRoomOrSuiteNumber ;
+    sh:datatype xsd:string ;
+    sh:name "Address Apartment Room Or SuiteNumber" ;
+  ];
+    sh:property [   
+    sh:path ceds:AddressStreetNumberAndName ;
+    sh:datatype xsd:string ;
+    sh:name "Address Street Number And Name" ;
+  ];
+    sh:property [   
+    sh:path ceds:AddressCity ;
+    sh:datatype xsd:string ;
+    sh:name "Address City" ;
+  ];
+    sh:property [   
+    sh:path ceds:StateAbbreviation ;
+    sh:datatype xsd:string ;
+    sh:name "State Abbreviation" ;
+  ]; 
+    sh:property [   
+    sh:path ceds:AddressPostalCode ;
+    sh:datatype xsd:string ;
+    sh:name "Address Postal Code" ;
+  ];
+     sh:property [   
+    sh:path ceds:Longitude ;
+    sh:datatype xsd:string ;
+    sh:name "Longitude" ;
+  ];
+    sh:property [   
+    sh:path ceds:Latitude ;
+    sh:datatype xsd:string ;
+    sh:name "Latitude" ;
+  ];
+.
+
+  ##### Membership
+ceds:MembershipShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:Membership ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:AssignmentStartDate;
+    sh:datatype xsd:dateTime ;
+    sh:name "Assignment Start Date" ;
+  ];
+   sh:property [
+    sh:path ceds:AssignmentEndDate;
+    sh:datatype xsd:dateTime ;
+    sh:name "Assignment End Date" ;
+  ];
+   sh:property [
+    sh:path ceds:hasPerson;
+    sh:node ceds:PersonShape ;
+    sh:name "Person" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+ ];
+  sh:property [
+    sh:path ceds:Role;
+    sh:name "Role" ;
+    sh:minCount 1;
+    sh:in (
+        ceds:Role_AEStaff
+        ceds:Role_AEStudent
+        ceds:Role_CTEStaff
+        ceds:Role_CTEStudent
+        ceds:Role_ELChild
+        ceds:Role_ELStaff
+        ceds:Role_K12Staff
+        ceds:Role_K12Student
+        ceds:Role_PSStaff
+        ceds:Role_PSStudent
+        ceds:Role_WorkforceProgramParticipant
+        ceds:Role_ChiefStateSchoolOfficer
+        ceds:Role_SchoolBoardMember
+        );
+     sh:nodeKind sh:IRI ;
+ ];
+ .
+ ##### Person
+ ceds:PersonShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:Person ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ;
+  sh:property [
+    sh:path ceds:hasPersonName;
+    sh:node ceds:PersonNameShape ;
+    sh:name "Person Name" ;
+    sh:minCount 1;
+    sh:maxCount 1;
+ ];
+  sh:property [
+    sh:path ceds:hasTelephone ;
+    sh:node ceds:TelephoneShape ;
+    sh:name "Telephone" ;
+    sh:minCount 1;
+ ];
+  sh:property [
+    sh:path ceds:hasPersonEmailAddress ;
+    sh:node ceds:PersonEmailAddress ;
+    sh:name "Person Email Address" ;
+    sh:minCount 1;
+ ];
+.
+
+ ##### PersonName
+ ceds:PersonNameShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:Person ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ; 
+  sh:property [   
+    sh:path ceds:FirstName ;
+    sh:datatype xsd:string ;
+    sh:name "First Name" ;
+  ];
+
+  sh:property [   
+    sh:path ceds:LastOrSurname ;
+    sh:datatype xsd:string ;
+    sh:name "Last Or Surname" ;
+  ];
+    sh:property [   
+    sh:path ceds:MiddleName ;
+    sh:datatype xsd:string ;
+    sh:name "Middle Name" ;
+  ];
+    sh:property [   
+    sh:path ceds:GenerationCodeOrSuffix ;
+    sh:datatype xsd:string ;
+    sh:name "Generation Code Or Suffix" ;
+  ];
+  .
+  ##### Telephone
+ ceds:TelephoneShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:Telephone ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ; 
+  sh:property [   
+    sh:path ceds:TelephoneNumber ;
+    sh:datatype xsd:string ;
+    sh:name "Telephone Number" ;
+  ];
+
+ sh:property [
+    sh:path ceds:TelephoneNumberType;
+    sh:name "Telephone Number Type" ;
+    sh:in (
+        ceds:TelephoneNumberType_Home
+        ceds:TelephoneNumberType_Work
+        ceds:TelephoneNumberType_Mobile
+        ceds:TelephoneNumberType_Other
+    );
+    sh:nodeKind sh:IRI ;
+  ];
+  .
+  ##### PersonEmailAddress
+ ceds:PersonEmailAddressShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:PersonEmailAddress ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ; 
+  sh:property [   
+    sh:path ceds:ElectronicMailAddress ;
+    sh:datatype xsd:string ;
+    sh:name "Electronic Mail Address" ;
+  ];
+   sh:property [
+    sh:path ceds:ElectronicMailAddressType;
+    sh:name "Electronic Mail Address Type" ;
+    sh:in (
+        ceds:ElectronicMailAddressType_Personal
+        ceds:TelephoneNumberType_Work
+        ceds:TelephoneNumberType_Other
+    );
+    sh:nodeKind sh:IRI ;
+  ];
+  .
+  ##### K12School
+ ceds:K12SchoolShape
+ a sh:NodeShape ;
+ sh:targetClass ceds:K12School ;
+ sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ; 
+
+sh:property [
+    sh:path ceds:hasGradeLevel;
+    sh:node ceds:GradeLevelShape ;
+    sh:name "Grade Level" ;
+   ];
+ 
+sh:property [
+    sh:path ceds:hasGradeLevelsApproved;
+    sh:node ceds:GradeLevelShape ;
+    sh:name "Grade Levels Approved" ;
+   ]; 
+ .
+
+ ##### GradeLevel
+  ceds:GradeLevelShape
+  a sh:NodeShape ;
+  sh:targetClass ceds:GradeLevel ;
+  sh:ignoredProperties (rdf:type rdf:id rdf:value rdfs:label) ; 
+ sh:property [
+    sh:path ceds:GradeLevel;
+    sh:name "Grade Level" ;
+    sh:in(
+        ceds:GradeLevel_PK
+        ceds:GradeLevel_01
+        ceds:GradeLevel_02
+        ceds:GradeLevel_03
+        ceds:GradeLevel_04
+        ceds:GradeLevel_05
+        ceds:GradeLevel_06
+        ceds:GradeLevel_07
+        ceds:GradeLevel_08
+        ceds:GradeLevel_09
+        ceds:GradeLevel_10
+        ceds:GradeLevel_11
+        ceds:GradeLevel_12
+        ceds:GradeLevel_TK
+        ceds:GradeLevel_KG
+    );
+    sh:nodeKind sh:IRI ;
+  ];
+  .
