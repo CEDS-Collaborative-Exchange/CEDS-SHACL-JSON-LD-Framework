@@ -1,24 +1,28 @@
 {
     "@context": {
-        "ceds": "http://ceds.ed.gov/terms#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "ceds": "https://github.com/CEDS-Collaborative-Exchange/CEDS-SHACL-JSON-LD-Framework/blob/main/context.json"
     },
-
+    "owl":"versionInfo 0.5.003"  ,                                            
     "@type": "ceds:K12School",
-    "@id": "http://cepi.michigan.gov/school/1",
+    "@id": "http://cepi.michigan.gov/school/4830",
+
+    "ceds:ResponsibleOrganizationIdentifier": "63080",
+ 
     "ceds:hasDataCollection": {
         "@type": "ceds:DataCollection",
         "ceds:DataCollectionName": "OrganizationCollection",
-        "ceds:DataCollectionSchoolYear": {
-            "@value": "2024",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        "ceds:DataCollectionSchoolYear": "2024",
+        "ceds:DataCollectionAcademicSchoolYear": "2024"
+  
+    },
+    "ceds:hasRecordStatus": {
+        "@type": "ceds:RecordStatus",
+        "ceds:RecordStatusDate": {
+            "@value": "2024-11-22T12:00:00Z",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
-        "ceds:DataCollectionAcademicSchoolYear": {
-            "@value": "2024",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        }    
+        "ceds:committedByOrganization": { "@id": "http://cepi.michigan.gov/organizations/63080" },
+        "ceds:RecordCreatedByPerson": { "@id": "http://cepi.michigan.gov/people/1" }
     },
     "ceds:hasOrganizationName": {
         "@type": "ceds:OrganizationName",
@@ -27,16 +31,103 @@
     },
     "ceds:HasOrganizationIdentification": {
         "@type": "ceds:OrganizationIdentification",
-        "ceds:OrganizationIdentificationSystem": { "@id": "http://ceds.ed.gov/terms#OrganizationIdentificationSystem_ACT" },
-        "ceds:OrganizationIdentifier": "06381"
+        "ceds:OrganizationIdentificationSystem": { "@id": "http://ceds.ed.gov/terms#OrganizationIdentificationSystem_LEA" },
+        "ceds:OrganizationIdentifier": "4830"
     },
-    "ceds:hasRecordStatus": {
-        "@type": "ceds:RecordStatus",
-        "ceds:RecordStatusDate": {
+    "ceds:hasOrganizarionRelationship": {
+      "@type": "ceds:OrganizationRelationship",
+      "ceds:OrganizationRelationshipSubject" : {"@id":"http://cepi.michigan.gov/organizations/63080" },
+      "ceds:OrganizationRelationshipObject": { "@id":"http://cepi.michigan.gov/organizations/4830"},
+      "ceds:OrganizationRelationshipType": {"@id": "http://ceds.ed.gov/terms#OrganizationRelationshipType_AuthorizingBody" }
+    },
+    "ceds:hasOrganizationOperationalDetails": {
+        "@type":"ceds:OrganizationOperationalDetails",
+        "ceds:OrganiztionOperationalStatus" : {"@id":"http://ceds.ed.gov/terms#OrganiztionOperationalStatus_Active"},
+        "ceds:OperationalStatusEffectiveDate" : {
+            "@value": "2024-12-01",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+    },
+    "ceds:hasLocation": {
+        "@type" : "ceds:Location",
+        "ceds:hasLocationAddress" :[ {
+            "@type": "ceds:LocationAddress",
+            "ceds:AddressTypeForOrganization" : {"@id": "http://ceds.ed.gov/terms#AddressTypeForOrganization_Mailing"},
+            "ceds:AddressStreetNumberAndName" : "PO Box 456",
+            "ceds:AddressCity":"Rochester",
+            "ceds:StateAbbreviation" : "MI",
+            "ceds:AddressPostalCode" :"48076"          
+        },
+        {
+            "@type": "ceds:LocationAddress",
+            "ceds:AddressTypeForOrganization" : {"@id": "http://ceds.ed.gov/terms#AddressTypeForOrganization_Physical"},
+            "ceds:AddressApartmentRoomOrSuiteNumber" :  "Room 212",               
+            "ceds:AddressStreetNumberAndName" :  "123 Main St.",
+            "ceds:AddressCity": "Bloomfield Hills",
+            "ceds:StateAbbreviation" : "MI",
+            "ceds:AddressPostalCode" : "48076",
+            "ceds:Longitude" :  "-83.24974941626571",
+            "ceds:Latitude" : "42.57470854821022"
+        }
+    ]
+    },
+    
+     "ceds:hasMembership": [ { 
+        "@type": "ceds:Membership",
+        "ceds:AssignmentStartDate" : {
+            "@value": "2021-11-22T12:00:00Z",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+         },
+         "ceds:AssignmentEndDate" : {
             "@value": "2024-11-22T12:00:00Z",
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-        },
-        "ceds:committedByOrganization": { "@id": "http://cepi.michigan.gov/organizations/1" },
-        "ceds:RecordCreatedByPerson": { "@id": "http://cepi.michigan.gov/people/1" }
+         },
+         "ceds:hasPerson" : {
+            "ceds:hasPersonName" : {
+               "ceds:FirstName": "Jon",
+               "ceds:LastOrSurname" : "Smith"
+            },
+            "ceds:hasTelephone" : {
+                "ceds:TelephoneNumber": "248-555-1212 ext 75",
+                "ceds:TelephoneNumberType" : {"@id" : "ceds:TelephoneNumberType_Work" }
+            },
+            "ceds:hasPersonEmailAddress" : {
+                "ceds:ElectronicMailAddress":"jon.smith@school.org",
+                "ceds:ElectronicMailAddressType" : {"@id" : "ceds:ElectronicMailAddressType_Work" }
+            }
+         },
+         "ceds:Role" : {"@id" : "ceds:Role_K12Staff" }            
+    } ,
+    { 
+        "@type": "ceds:Membership",
+        "ceds:AssignmentStartDate" : {
+            "@value": "2021-11-22T12:00:00Z",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+         },
+         "ceds:AssignmentEndDate" : {
+            "@value": "2024-11-22T12:00:00Z",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+         },
+         "ceds:hasPerson" : {
+            "ceds:hasPersonName" : {
+                "ceds:FirstName": "Jane",
+                "ceds:LastOrSurname" : "Doe"
+            },
+            "ceds:hasTelephone" : {
+                "ceds:TelephoneNumber": "248-555-1212 ext 82",
+               "ceds:TelephoneNumberType" : {"@id" : "ceds:TelephoneNumberType_Work" }
+            },
+            "ceds:hasPersonEmailAddress" : {
+               "ceds:ElectronicMailAddress": "jane.doe@school.org",
+               "ceds:ElectronicMailAddressType" : {"@id" : "ceds:ElectronicMailAddressType_Work" }
+            }
+         },
+         "ceds:Role" : {"@id" : "ceds:Role_K12Staff" }            
+    }] ,
+    "ceds:hasGradeLevel": {
+        "ceds:GradeLevel" : [{"@id": "ceds:GradeLevel_01" } , {"@id": "ceds:GradeLevel_02" }, {"@id": "ceds:GradeLevel_03" }, {"@id": "ceds:GradeLevel_04" }]
+   },
+    "ceds:hasGradeLevelsApproved": {
+        "ceds:GradeLevelsApproved" :  [{"@id": "ceds:GradeLevel_01" } , {"@id": "ceds:GradeLevel_02" }, {"@id": "ceds:GradeLevel_03" }, {"@id": "ceds:GradeLevel_04" }, {"@id": "ceds:GradeLevel_06" }]
     }
 }
