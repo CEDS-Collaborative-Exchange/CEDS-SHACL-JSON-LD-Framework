@@ -351,4 +351,4 @@ ceds:GradeLevelProperty a sh:PropertyShape ;
         ) ;
     sh:name "Grade Level" ;
     sh:nodeKind sh:IRI ;
-    sh:path ceds:C200000  # GradeLevel
+    sh:path ceds:C200000 .  # GradeLevel
