@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "ceds": "http://ceds.ed.gov/terms#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sh": "http://www.w3.org/ns/shacl#"
+  },
+  "@id": "http://example.org/organization/12345",
+  "@type": "ceds:C200239",
+  "rdfs:label": "Organization",
+  "ceds:P600474": {
+    "@value": "http://example.org/organizationcalendar/5566778899",
+    "rdfs:label": "Organization Calendar"
+  }
+}
+
+
+
+
+
+{
+  "@context": {
+    "ceds": "http://ceds.ed.gov/terms#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sh": "http://www.w3.org/ns/shacl#"
+  },
+  "@id": "http://example.org/organizationcalendar/5566778899",
+  "@type": "ceds:C200241",
+  "rdfs:label": "Organization Calendar",
+  "ceds:P600474": {
+    "@id": "http://example.org/organization/12345",
+    "@label": "Organization"
+  },
+  "ceds:P000243": {
+    "@value": "2023",
+    "rdfs:label": "School Year"
+  },
+  "ceds:P000494": {
+    "@value": "CAL123",
+    "rdfs:label": "Calendar Code"
+  },
+  "ceds:P000495": {
+    "@value": "Sample School Calendar",
+    "rdfs:label": "Calendar Description"
+  },
+  "ceds:P600475": [
+    {
+      "@type": "ceds:C200243",
+      "rdfs:label": "Organization Calendar Day",
+      "ceds:P000598": {
+        "@value": "Alternate Day Name Example",
+        "rdfs:label": "Alternate Day Name"
+      }
+    }
+  ],
+  "ceds:P600476": [
+    {
+      "@type": "ceds:C200244",
+      "rdfs:label": "Organization Calendar Event",
+      "ceds:P001275": {
+        "@value": "2024-01-01",
+        "rdfs:label": "Calendar Event Date"
+      },
+      "ceds:P001276": {
+        "@value": "New Year's Day",
+        "rdfs:label": "Calendar Event Day Name"
+      },
+      "ceds:P001919": {
+        "@value": "08:00:00",
+        "rdfs:label": "Start Time"
+      },
+      "ceds:P001920": {
+        "@value": "15:00:00",
+        "rdfs:label": "End Time"
+      }
+    },
+    {
+      "@type": "ceds:C200244",
+      "rdfs:label": "Organization Calendar Event",
+      "ceds:P001275": {
+        "@value": "2023-12-25",
+        "rdfs:label": "Calendar Event Date"
+      },
+      "ceds:P001276": {
+        "@value": "Christmas Day",
+        "rdfs:label": "Calendar Event Day Name"
+      },
+      "ceds:P001919": {
+        "@value": "08:00:00",
+        "rdfs:label": "Start Time"
+      },
+      "ceds:P001920": {
+        "@value": "15:00:00",
+        "rdfs:label": "End Time"
+      }
+    }
+  ]
+}
