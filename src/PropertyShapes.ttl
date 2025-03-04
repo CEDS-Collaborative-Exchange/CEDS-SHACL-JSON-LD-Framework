@@ -542,6 +542,53 @@ ceds:P000704Shape
   sh:maxLength 300 ; 
 .
 
+ceds:P600206Shape 
+  a sh:PropertyShape ;
+  sh:in ( 
+    ceds:NI200000181523 # PK
+    ceds:NI200000181526 # 01
+    ceds:NI200000181527 # 02
+    ceds:NI200000181505 # 03
+    ceds:NI200000181506 # 04
+    ceds:NI200000181507 # 05
+    ceds:NI200000181508 # 06
+    ceds:NI200000181509 # 07
+    ceds:NI200000181510 # 08
+    ceds:NI200000181511 # 09
+    ceds:NI200000181512 # 10
+    ceds:NI200000181513 # 11
+    ceds:NI200000181514 # 12
+    ceds:NI200000181524 # TK
+    ceds:NI200000181525 # KG
+    ) ;
+  sh:name "Grade Level" ;
+  sh:nodeKind sh:IRI ;
+  sh:path ceds:C200000 .  # GradeLevel
+  
+  ceds:P001926Shape
+    a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001926 ;
+    sh:name "Grade Levels Approved" ;
+    sh:in ( 
+      ceds:NI200000181523 # PK
+      ceds:NI200000181526 # 01
+      ceds:NI200000181527 # 02
+      ceds:NI200000181505 # 03
+      ceds:NI200000181506 # 04
+      ceds:NI200000181507 # 05
+      ceds:NI200000181508 # 06
+      ceds:NI200000181509 # 07
+      ceds:NI200000181510 # 08
+      ceds:NI200000181511 # 09
+      ceds:NI200000181512 # 10
+      ceds:NI200000181513 # 11
+      ceds:NI200000181514 # 12
+      ceds:NI200000181524 # TK
+      ceds:NI200000181525 # KG
+    ) ;
+  .
+
 ceds:P000115Shape
   a sh:PropertyShape ;
   sh:path ceds:P000115 ;
@@ -2886,100 +2933,6 @@ ceds:P000255Shape
     ceds:NI000255115740    # Female - Female
     ceds:NI000255116068    # Male - Male
     ceds:NI000255116282    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000016Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000016 ;
-  sh:name "American Indian or Alaska Native" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000020Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000020 ;
-  sh:name "Asian" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000034Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000034 ;
-  sh:name "Black or African American" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000192Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000192 ;
-  sh:name "Native Hawaiian or Other Pacific Islander" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000301Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000301 ;
-  sh:name "White" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
-  ) ;
-.
-
-ceds:C000973Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000973 ;
-  sh:name "Demographic Race Two or More Races" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-  ) ;
-.
-
-ceds:P001421Shape
-  a sh:PropertyShape ;
-  sh:path ceds:P001421 ;
-  sh:name "Has Other Race Indicator" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-  ) ;
-.
-
-ceds:C000144Shape
-  a sh:PropertyShape ;
-  sh:path ceds:C000144 ;
-  sh:name "Hispanic or Latino Ethnicity" ;
-  sh:datatype xsd:anyURI ;
-  sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
-    ceds:NI000301103477    # NotSelected - Not selected
   ) ;
 .
 
@@ -38599,6 +38552,22 @@ ceds:C001990Shape
     ceds:NI001990162353    # Retired - Retired
     ceds:NI001990162354    # Submitted - Submitted
   ) ;
+.
+
+ceds:P001970Shape
+  a sh:PropertyShape ;
+  sh:path ceds:C001970 ;
+  sh:name "Data Collection Academic School Year" ;
+  sh:datatype xsd:int ;
+  sh:pattern "^(19|20)\\d{2}$" ; 
+.
+
+ceds:P001971Shape
+  a sh:PropertyShape ;
+  sh:path ceds:C001971 ;
+  sh:name "Data Collection School Year" ;
+  sh:datatype xsd:int ;
+  sh:pattern "^(19|20)\\d{2}$" ; 
 .
 
 ceds:C001974Shape
