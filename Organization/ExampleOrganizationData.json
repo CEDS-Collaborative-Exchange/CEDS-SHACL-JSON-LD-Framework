@@ -1,0 +1,153 @@
+{
+    "@context": "https://cedsstoragedemo.blob.core.windows.net/azure-webjobs-hosts/context.json?sp=r&st=2025-03-21T21:36:59Z&se=2025-04-05T05:36:59Z&spr=https&sv=2024-11-04&sr=b&sig=5vCFTLXJEcF5o%2Bx6G2rSERMuQRh81xvnR0bLvUAE9rI%3D",
+    "@type": "K12School", 
+  
+    "@id": "http://cepi.michigan.gov/school/4830",
+    "ResponsibleOrganizationIdentifier": {
+      "@value": "63080",
+      "@type": "http://www.w3.org/2001/XMLSchema#token"
+    },
+  
+    "hasDataCollection": {
+      "@type": "DataCollection", 
+      "DataCollectionName": "OrganizationCollection",
+      "DataCollectionSchoolYear": "2022",
+      "DataCollectionAcademicSchoolYear": "2024"
+    },
+    "hasRecordStatus": {
+      "@type": "RecordStatus",
+      "RecordStatusDate": {
+        "@value": "2024-11-22T12:00:00Z",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "committedByOrganization": { "@id": "http://cepi.michigan.gov/organizations/63080" },
+      "RecordCreatedByPerson": { "@id": "http://cepi.michigan.gov/people/1" }
+    },
+    "hasOrganizationTitle": {
+      "@type": "OrganizationTitle",
+      "NameOfInstitution": "LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG Organization Name",
+      "ShortNameOfOrganization": "Organization Short Name"
+    },
+    "hasOrganizationIdentification": {
+      "@type": "OrganizationIdentification",
+      "OrganizationIdentificationSystem": { "@id": "OrganizationIdentificationSystem_LEA" },
+      "OrganizationIdentifier": {
+        "@value": "4830",
+        "@type": "http://www.w3.org/2001/XMLSchema#token"
+      }
+    },
+    "hasOrganizarionRelationship": {
+      "@type": "OrganizationRelationship",
+      "OrganizationRelationshipSubject": { "@id": "http://cepi.michigan.gov/organizations/63080" },
+      "OrganizationRelationshipObject": { "@id": "http://cepi.michigan.gov/organizations/4830" },
+      "OrganizationRelationshipType": { "@id": "OrganizationRelationshipType_AuthorizingBody" }
+    },
+    "hasOrganizationOperationalDetails": {
+      "@type": "OrganizationOperationalDetails",
+      "OrganiztionOperationalStatus": { "@id": "OrganiztionOperationalStatus_Active" },
+      "OperationalStatusEffectiveDate": {
+        "@value": "2024-12-01",
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    },
+    "hasLocation": {
+      "@type": "Location",
+      "hasLocationAddress": [
+        {
+          "@type": "LocationAddress",
+          "hasAddressTypeForOrganization": { "@id": "AddressTypeForOrganization_Mailing" },
+          "AddressStreetNumberAndName": "PO Box 456",
+          "AddressCity": "Rochester",
+          "hasStateAbbreviation": { "@id": "StateAbbreviation_MI"},
+          "AddressPostalCode": "48076"
+        },
+        {
+          "@type": "LocationAddress",
+          "hasAddressTypeForOrganization": { "@id": "AddressTypeForOrganization_Physical" },
+          "AddressApartmentRoomOrSuiteNumber": "Room 212",
+          "AddressStreetNumberAndName": "123 Main St.",
+          "AddressCity": "Bloomfield Hills",
+          "hasStateAbbreviation": { "@id": "StateAbbreviation_MI"},
+          "AddressPostalCode": "48076",
+          "Longitude": "-83.24974941626571",
+          "Latitude": "42.57470854821022"
+        }
+      ]
+    },
+  
+    "hasMembership": [
+      {
+        "@type": "Membership",
+        "AssignmentStartDate": {
+          "@value": "2021-11-22T12:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "AssignmentEndDate": {
+          "@value": "2024-11-22T12:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "hasPerson": {
+          "@type": "Person",
+          "hasPersonName": {
+            "@type": "PersonName",
+            "FirstName": "Jon",
+            "LastOrSurname": "Smith"
+          },
+          "hasTelephone": {
+            "@type": "Telephone",
+            "TelephoneNumber": "248-555-1212 ext 75",
+            "hasTelephoneNumberType": { "@id": "TelephoneNumberType_Work" }
+          },
+          "hasPersonEmailAddress": {
+            "@type": "PersonEmailAddress",
+            "ElectronicMailAddress": "jon.smith@school.org",
+            "hasElectronicMailAddressType": { "@id": "ceds:NI000089172620" }
+          }
+        },
+        "hasRole": { "@id": "Role_K12Staff" }
+      },
+      {
+        "@type": "Membership",
+        "AssignmentStartDate": {
+          "@value": "2021-11-22T12:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "AssignmentEndDate": {
+          "@value": "2024-11-22T12:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "hasPerson": {
+          "@type": "Person",
+          "hasPersonName": {
+            "@type": "PersonName",
+            "FirstName": "Jane",
+            "LastOrSurname": "Doe"
+          },
+          "hasTelephone": {
+            "@type": "Telephone",
+            "TelephoneNumber": "248-555-1212 ext 82",
+            "hasTelephoneNumberType": { "@id": "TelephoneNumberType_Work" }
+          },
+          "hasPersonEmailAddress": {
+            "@type": "PersonEmailAddress",
+            "ElectronicMailAddress": "jane.doe@school.org",
+            "hasElectronicMailAddressType": { "@id": "ceds:NI000089172620" }
+          }
+        },
+        "hasRole": { "@id": "Role_K12Staff" }
+      }
+    ],
+    "hasGradeLevel": [
+        { "@id": "GradeLevel_01" },
+        { "@id": "GradeLevel_02" },
+        { "@id": "GradeLevel_03" },
+        { "@id": "GradeLevel_04" }
+      ],
+    "hasGradeLevelsApproved": [
+        { "@id": "GradeLevel_01" },
+        { "@id": "GradeLevel_02" },
+        { "@id": "GradeLevel_03" },
+        { "@id": "GradeLevel_04" },
+        { "@id": "GradeLevel_06" }
+      ]
+  }

@@ -1,0 +1,285 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+############################################################################################################
+# Node Shapes
+############################################################################################################
+
+ceds:C200199Shape  # K12School
+    a sh:NodeShape ;
+    sh:closed true ;
+    # rdfs:subClassOf ceds:C200239Shape ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P001466Shape ; # ResponsibleOrganizationIdentifier
+    sh:property ceds:P201003Shape ; # hasDataCollection
+    sh:property ceds:P201001Shape ; # hasRecordStatus
+    sh:property ceds:P600519Shape ; # hasOrganizationRelationship
+    sh:property ceds:P600541Shape ; # hasOrganizationOperationalDetails
+    sh:property ceds:P600299Shape ; # hasLocation
+    sh:property ceds:P600514Shape ; # hasMembership
+    sh:property ceds:P600479Shape ; # hasOrganizationName
+    sh:property ceds:P600502Shape ; # OrganizationIdentificationShape
+    sh:property ceds:P600206Shape ; # hasGradeLevel
+    sh:property ceds:P001926Shape ; # hasGradeLevelsApproved
+    sh:targetClass ceds:C200199 ; # K12School
+. 
+
+ceds:C200398Shape # OrganizationOperationalDetails
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P001418Shape ; # hasOrganizationOperationalStatus
+    sh:property ceds:P000534Shape ; # OperationalStatusEffectiveDate
+    sh:targetClass ceds:C200398 ; # OrganizationOperationalDetails
+.
+
+ceds:C200286Shape # PersonEmailAddress
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000088Shape ; # ElectronicMailAddress
+    sh:property ceds:P000089Shape ; # ElectronicMailAddressType
+    sh:targetClass ceds:C200286 ; # PersonEmailAddress
+.
+
+ceds:C200410Shape # DataCollection
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P001966Shape ; # DataCollectionName
+    sh:property ceds:P001971Shape ; # DataCollectionSchoolYear 
+    sh:property ceds:P001970Shape ; # DataCollectionAcademicSchoolYear
+    sh:targetClass ceds:C200410 ; # DataCollection
+.
+
+ceds:C200237Shape # Location 
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P600471Shape ; # hasLocationAddress
+    sh:targetClass ceds:C200237 ; # Location
+.
+
+ceds:C200238Shape # LocationAddress
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P002118Shape ; # hasAddressTypeForOrganization
+    sh:property ceds:P000019Shape ; # AddressApartmentRoomOrSuiteNumber
+    sh:property ceds:P000269Shape ; # AddressStreetNumberAndName
+    sh:property ceds:P000040Shape ; # AddressCity
+    sh:property ceds:P000267Shape ; # StateAbbreviation
+    sh:property ceds:P000214Shape ; # AddressPostalCode
+    sh:property ceds:P000607Shape ; # Longitude
+    sh:property ceds:P000606Shape ; # Latitude
+    sh:targetClass ceds:C200238 ; # LocationAddress
+.
+
+
+ceds:C200257Shape # Membership
+    a sh:NodeShape ; # Replace with new Contact classes?
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000526Shape ; # AssignmentStartDate
+    sh:property ceds:P000527Shape ; # AssignmentEndDate
+    sh:property ceds:P600510Shape ; # hasPerson  
+    sh:property ceds:P600511Shape ; # hasRole
+    sh:targetClass ceds:C200257 ; # Membership
+.
+
+ceds:C200252Shape # OrganizationIdentification
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000827Shape ; # OrganizationIdentificationSystem
+    sh:property ceds:P000826Shape ; # OrganizationIdentifier
+    sh:targetClass ceds:C200252 ; # OrganizationIdentification
+.
+
+ceds:C200246Shape # OrganizationName
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000191Shape ; # NameOfInstitution
+    sh:property ceds:P001487Shape ; # ShortNameOfOrganization
+    sh:targetClass ceds:C200246 ; # OrganizationName
+.
+
+ceds:C200265Shape # OrganizationRelationship
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P600542Shape ; # hasOrganizationRelationshipSubject
+    sh:property ceds:P600543Shape ; # hasOrganizationRelationshipObject
+    sh:property ceds:P001905Shape ; # OrganizationRelationshipType
+    sh:targetClass ceds:C200265 ; # OrganizationRelationship
+.
+
+ceds:C200239Shape # Organization
+    a rdfs:class,
+    sh:NodeShape ;
+    sh:closed true ;
+    owl:versionInfo "0.5.003" ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P001466Shape ; # ResponsibleOrganizationIdentifier
+    sh:property ceds:P201003Shape ; # hasDataCollection
+    sh:property ceds:P201001Shape ; # hasRecordStatus
+    sh:property ceds:P600519Shape ; # hasOrganizationRelationship
+    sh:property ceds:P600541Shape ; # hasOrganizationOperationalDetails
+    sh:property ceds:P600299Shape ; # hasLocation
+    sh:property ceds:P600514Shape ; # hasMembership
+    sh:property ceds:P600479Shape ; # hasOrganizationName
+    sh:property ceds:P600502Shape ; # OrganizationIdentificationShape
+    sh:targetClass ceds:C200239 ; # Organization
+.
+
+ceds:C200377Shape # PersonName 
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000115Shape ; # FirstName
+    sh:property ceds:P000172Shape ; # LastOrSurname
+    sh:property ceds:P000184Shape ; # MiddleName
+    sh:property ceds:P000121Shape ; # GenerationCodeOrSuffix
+    sh:targetClass ceds:C200377 ; # PersonName
+.
+
+ceds:C200275Shape # Person 
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P600336Shape ; # hasPersonName
+    sh:property ceds:P600529Shape ; # hasTelephone
+    sh:property ceds:P600041Shape ; # hasPersonEmailAddress
+    sh:targetClass ceds:C200275 ; # Person
+.
+
+ceds:C200375Shape # RecordStatus
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P200998Shape ; # RecordStatusDate
+    sh:property ceds:P200999Shape ; # CommittedByOrganization
+    sh:property ceds:P201000Shape ; # RecordCreatedByPerson
+    sh:targetClass ceds:C200375 ; # RecordStatus
+.
+
+ceds:C200272Shape # Telephone
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:P000279Shape ; # TelephoneNumber
+    sh:property ceds:P000280Shape ; # TelephoneNumberType
+    sh:targetClass ceds:C200272 ; # Telephone
+.
+
+############################################################################################################
+# Properties        
+############################################################################################################
+
+ceds:P600299Shape # hasLocation
+    a sh:PropertyShape ;
+    sh:path ceds:P600299 ; # hasLocation
+    sh:node ceds:C200237Shape ; # Location Shape
+.
+
+ceds:P600471Shape # hasLocationAddress
+    a sh:PropertyShape ;
+    sh:path ceds:P600471 ; # hasLocationAddress
+    sh:node ceds:C200238Shape ; # LocationAddress Shape
+.
+
+ceds:P600542Shape # hasOrganizationRelationshipSubject
+    a sh:PropertyShape ;
+    sh:path ceds:P600542 ; # hasOrganizationRelationshipSubject
+    sh:node ceds:C200239Shape ; # Organization Shape
+.
+
+ceds:P200999Shape # hasOrganizationRelationshipSubject
+    a sh:PropertyShape ;
+    sh:path ceds:P200999 ; # committedByOrganization
+    sh:node ceds:C200239Shape ; # Organization Shape
+.
+
+ceds:P600543Shape # hasOrganizationRelationshipObject
+    a sh:PropertyShape ;
+    sh:path ceds:P600543 ; # hasOrganizationRelationshipObject
+    sh:node ceds:C200239Shape ; # Organization Shape
+.
+
+ceds:P600510Shape # hasPerson
+    a sh:PropertyShape ;
+    sh:path ceds:P600510 ; # hasPerson
+    sh:node ceds:C200275Shape ; # Person Shape
+.
+
+ceds:P201000Shape # RecordCreatedByPerson
+    a sh:PropertyShape ;
+    sh:path ceds:P201000 ; # RecordCreatedByPerson
+    sh:node ceds:C200275Shape ; # Person Shape
+.
+
+ceds:P201003Shape # hasDataCollection
+    a sh:PropertyShape ;
+    sh:path ceds:P201003 ; # hasDataCollection
+    sh:node ceds:C200410Shape ; # DataCollection Shape
+.
+
+ceds:P201001Shape # hasRecordStatus
+    a sh:PropertyShape ;
+    sh:path ceds:P201001 ; # hasRecordStatus
+    sh:node ceds:C200375Shape ; # RecordStatus Shape
+.
+
+ceds:P600519Shape # hasOrganizationRelationship
+    a sh:PropertyShape ;
+    sh:path ceds:P600519 ; # hasOrganizationRelationship
+    sh:node ceds:C200265Shape ; # OrganizationRelationship Shape
+.
+
+ceds:P600541Shape # hasOrganizationOperationalDetails
+    a sh:PropertyShape ;
+    sh:path ceds:P600541 ; # hasOrganizationOperationalDetails
+    sh:node ceds:C200398Shape ; # OrganizationOperationalDetails Shape
+.
+
+ceds:P600514Shape # hasMembership
+    a sh:PropertyShape ;
+    sh:path ceds:P600514 ; # hasMembership
+    sh:node ceds:C200257Shape ; # Membership Shape
+.
+
+ceds:P600479Shape # hasOrganizationName
+    a sh:PropertyShape ;
+    sh:path ceds:P600479 ; # hasOrganizationName
+    sh:node ceds:C200246Shape ; # OrganizationName Shape
+.
+
+ceds:P600502Shape # hasOrganizationIdentification
+    a sh:PropertyShape ;
+    sh:path ceds:P600502 ; # hasOrganizationIdentification
+    sh:node ceds:C200252Shape ; # OrganizationIdentification Shape
+.
+
+ceds:P600336Shape # hasPersonName
+    a sh:PropertyShape ;
+    sh:path ceds:P600336 ; # hasPersonName
+    sh:node ceds:C200377Shape ; # PersonName Shape
+.
+
+ceds:P600529Shape # hasTelephone
+    a sh:PropertyShape ;
+    sh:path ceds:P600529 ; # hasTelephone
+    sh:node ceds:C200272Shape ; # Telephone Shape
+.
+ceds:P600041Shape # hasPersonEmailAddress
+    a sh:PropertyShape ;
+    sh:path ceds:P600041 ; # hasPersonEmailAddress
+    sh:node ceds:C200286Shape ; # PersonEmailAddress Shape
+.
+
+ceds:P001970Shape sh:equals ceds:P001971Shape . # DataCollectionSchoolYear
