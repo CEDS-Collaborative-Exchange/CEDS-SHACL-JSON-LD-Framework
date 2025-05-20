@@ -1,0 +1,30 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:RoleAttendanceEventShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AttendanceEventDateShape,
+        ceds:AttendanceEventDurationDayShape,
+        ceds:AttendanceEventDurationHoursShape,
+        ceds:AttendanceEventDurationMinutesShape,
+        ceds:EndTimeShape,
+        ceds:RecordEndDateTimeShape,
+        ceds:RecordStartDateTimeShape,
+        ceds:StartTimeShape,
+        ceds:hasAbsentAttendanceCategoryShape,
+        ceds:hasAttendanceEventTypeShape,
+        ceds:hasAttendanceStatusShape,
+        ceds:hasLeaveEventTypeShape,
+        ceds:hasMembershipShape,
+        ceds:hasPresentAttendanceCategoryShape ;
+    sh:targetClass ceds:C200351 .
+
+ceds:hasMembershipShape a sh:PropertyShape ;
+    sh:class ceds:C200257 ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600514 .
+

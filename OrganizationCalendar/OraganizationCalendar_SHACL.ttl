@@ -1,0 +1,90 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:OrganizationCalendarShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:CalendarCodeShape,
+        ceds:CalendarDescriptionShape,
+        ceds:RecordEndDateTimeShape,
+        ceds:RecordStartDateTimeShape,
+        ceds:SchoolYearShape,
+        ceds:hasOrganizationCalendarDayShape,
+        ceds:hasOrganizationCalendarEventShape,
+        ceds:hasOrganizationCalendarSessionShape,
+        ceds:hasOrganizationShape ;
+    sh:targetClass ceds:C200241 .
+
+ceds:OrganizationCalendarDayShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AlternateDayNameShape,
+        ceds:RecordEndDateTimeShape,
+        ceds:RecordStartDateTimeShape ;
+    sh:targetClass ceds:C200243 .
+
+ceds:OrganizationCalendarEventShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AlternateDayNameShape,
+        ceds:CalendarEventDateShape,
+        ceds:CalendarEventDayNameShape,
+        ceds:EndTimeShape,
+        ceds:RecordEndDateTimeShape,
+        ceds:RecordStartDateTimeShape,
+        ceds:StartTimeShape,
+        ceds:hasCalendarEventTypeShape ;
+    sh:targetClass ceds:C200244 .
+
+ceds:OrganizationCalendarSessionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:CourseBeginDateShape,
+        ceds:CourseEndDateShape,
+        ceds:DaysInSessionShape,
+        ceds:FirstInstructionDateShape,
+        ceds:InstructionalMinutesPerDayShape,
+        ceds:LastInstructionDateShape,
+        ceds:LunchMinutesPerDayShape,
+        ceds:MinutesPerDayShape,
+        ceds:RecessMinutesPerDayShape,
+        ceds:RecordEndDateTimeShape,
+        ceds:RecordStartDateTimeShape,
+        ceds:SchoolYearMinutesShape,
+        ceds:SessionBeginDateShape,
+        ceds:SessionCodeShape,
+        ceds:SessionDescriptionShape,
+        ceds:SessionDesignatorShape,
+        ceds:SessionEndTimeShape,
+        ceds:SessionSequenceNumberShape,
+        ceds:SessionStartTimeShape,
+        ceds:hasAcademicTermDesignatorShape,
+        ceds:hasSessionAttendanceTermIndicatorShape,
+        ceds:hasSessionMarkingTermIndicatorShape,
+        ceds:hasSessionSchedulingTermIndicatorShape,
+        ceds:hasSessionTypeShape ;
+    sh:targetClass ceds:C200245 .
+
+ceds:hasOrganizationCalendarDayShape a sh:PropertyShape ;
+    sh:class ceds:C200243 ;
+    sh:node ceds:OrganizationCalendarDayShape ;
+    sh:path ceds:P600475 .
+
+ceds:hasOrganizationCalendarEventShape a sh:PropertyShape ;
+    sh:class ceds:C200244 ;
+    sh:node ceds:OrganizationCalendarEventShape ;
+    sh:path ceds:P600476 .
+
+ceds:hasOrganizationCalendarSessionShape a sh:PropertyShape ;
+    sh:class ceds:C200245 ;
+    sh:node ceds:OrganizationCalendarSessionShape ;
+    sh:path ceds:P600190 .
+
+ceds:hasOrganizationShape a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600062 .
+
