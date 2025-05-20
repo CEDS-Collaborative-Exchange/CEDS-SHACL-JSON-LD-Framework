@@ -4,7 +4,8 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ceds:OrganizationCalendarCrisisShape a sh:NodeShape ;
+# Create new PersonCrisisShape or rename this to CrisisShape 
+ceds:CrisisShape a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
     sh:property ceds:CrisisCodeShape,
@@ -16,6 +17,10 @@ ceds:OrganizationCalendarCrisisShape a sh:NodeShape ;
         ceds:RecordEndDateTimeShape,
         ceds:RecordStartDateTimeShape,
         ceds:hasOrganizationShape ;
+        ceds:hasFacilityShape ;
+        ceds:hasOrganizationCalendarShape ; # Add to Ontology and Filter In
+        ceds:hasPersonShape ; # Add to Ontology and Filter In
+    sh:xone ( ceds:hasOrganizationShape ceds:hasOrganizationCalendarShape ceds:hasPersonShape ) ;
     sh:targetClass ceds:C200242 .
 
 ceds:hasOrganizationShape a sh:PropertyShape ;
@@ -23,3 +28,20 @@ ceds:hasOrganizationShape a sh:PropertyShape ;
     sh:nodeKind sh:IRI ;
     sh:path ceds:P600062 .
 
+# Add to Ontology
+ceds:hasPersonShape a sh:PropertyShape ;
+    sh:class ceds:C200275 ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600510 .
+
+# Add to Ontology
+ceds:hasOrganizationCalendarShape a sh:PropertyShape ;
+    sh:class ceds:C200241 ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600473 .
+
+# Add to Ontology
+ceds:hasFacilityShape a sh:PropertyShape ;
+    sh:class ceds:??? ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:??? .
