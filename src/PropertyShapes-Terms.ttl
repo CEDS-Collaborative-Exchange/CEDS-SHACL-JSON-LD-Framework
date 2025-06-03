@@ -16638,8 +16638,8 @@ ceds:hasSpecialEducationParaprofessionalShape
   sh:name "Has Special Education Paraprofessional" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
+    ceds:NI000261100001    # Yes - Yes
+    ceds:NI000261100002    # No - No
   ) ;
 .
 
@@ -16649,8 +16649,8 @@ ceds:hasSpecialEducationRelatedServicesPersonnelShape
   sh:name "Has Special Education Related Services Personnel" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
+    ceds:NI000262100001    # Yes - Yes
+    ceds:NI000262100002    # No - No
   ) ;
 .
 
@@ -16680,8 +16680,8 @@ ceds:hasSpecialEducationTeacherShape
   sh:name "Has Special Education Teacher" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
+    ceds:NI000264100001    # Yes - Yes
+    ceds:NI000264100002    # No - No
   ) ;
 .
 
@@ -23808,6 +23808,34 @@ ceds:hasCourseApplicableEducationLevelShape
   a sh:PropertyShape ;
   sh:path ceds:P001301 ;
   sh:name "Has Course Applicable Education Level" ;
+  sh:nodeKind sh:IRI ;
+  sh:in ( 
+    ceds:NI200000181504 # Prenatal - Prenatal
+    ceds:NI200000181515 # Birth - Birth
+    ceds:NI200000181521 # IT - Infant/Toddler
+    ceds:NI200000181522 # PR - Preschool
+    ceds:NI200000181523 # PK - Prekindergarten
+    ceds:NI200000181524 # TK - Transitional Kindergarten
+    ceds:NI200000181525 # KG - Kindergarten
+    ceds:NI200000181526 # 01 - First Grade
+    ceds:NI200000181527 # 02 - Second Grade
+    ceds:NI200000181505 # 03 - Third Grade
+    ceds:NI200000181506 # 04 - Fourth Grade
+    ceds:NI200000181507 # 05 - Fifth Grade
+    ceds:NI200000181508 # 06 - Sixth Grade
+    ceds:NI200000181509 # 07 - Seventh Grade
+    ceds:NI200000181510 # 08 - Eighth Grade
+    ceds:NI200000181511 # 09 - Ninth Grade
+    ceds:NI200000181512 # 10 - Tenth Grade
+    ceds:NI200000181513 # 11 - Eleventh Grade
+    ceds:NI200000181514 # 12 - Twelfth Grade
+    ceds:NI200000181516 # 13 - Grade 13
+    ceds:NI200000181517 # PS - Postsecondary
+    ceds:NI200000181518 # UG - Ungraded
+    ceds:NI200000181519 # AE - Adult Education
+    ceds:NI200000181520 # Other - Other
+    ) ;
+
 .
 
 ceds:CourseRepeatabilityMaximumNumberShape
@@ -24726,8 +24754,8 @@ ceds:hasTeacherOfRecordShape
   sh:name "Has Teacher of Record" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
+    ceds:NI000647100001    # Yes - Yes
+    ceds:NI000647100002    # No - No
   ) ;
 .
 
@@ -38693,9 +38721,16 @@ ceds:DataCollectionNameShape
   sh:maxLength 60 ; 
 .
 
-ceds:DataCollectionStatusShape
+ceds:DataCollectionDescriptionShape
   a sh:PropertyShape ;
-  sh:path ceds:C001990 ;
+  sh:path ceds:P001967 ;
+  sh:name "Data Collection Description" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:HasDataCollectionStatusShape
+  a sh:PropertyShape ;
+  sh:path ceds:P001990 ;
   sh:name "Data Collection Status" ;
   sh:nodeKind sh:IRI ;
   sh:in (

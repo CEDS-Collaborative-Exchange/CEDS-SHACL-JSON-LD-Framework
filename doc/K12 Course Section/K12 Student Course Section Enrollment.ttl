@@ -1,0 +1,111 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+ceds:StudentCourseSectionEnrollmentShape a sh:NodeShape ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:CourseAddDateShape,
+        ceds:CourseDropDateShape,
+        ceds:CourseSectionEnrollmentStatusEndDateShape,
+        ceds:CourseSectionEnrollmentStatusStartDateShape,
+        ceds:CourseSectionExitWithdrawalDateShape,
+        ceds:GradeValueQualifierShape,
+        ceds:NumberOfCreditsAttemptedShape,
+        ceds:NumberOfCreditsEarnedShape,
+        ceds:StudentCourseSectionGradeEarnedShape,
+        ceds:hasAdditionalCreditTypeShape,
+        ceds:hasCourseGPAApplicabilityShape,
+        ceds:hasCourseRepeatCodeShape,
+        ceds:hasCourseSectionEnrollmentStatusTypeShape,
+        ceds:hasCourseSectionEntryTypeShape,
+        ceds:hasCourseSectionExitTypeShape,
+        ceds:hasCreditUnitTypeShape,
+        ceds:hasExitOrWithdrawalStatusShape,
+        ceds:hasGradeLevelWhenCourseTakenShape,
+        ceds:hasK12StudentCourseSectionMarkShape,
+        ceds:hasPreAndPostTestIndicatorShape,
+        ceds:hasProgressLevelShape,
+        ceds:hasTuitionFundedShape ;
+    sh:targetClass ceds:C200213 .
+
+ceds:K12StudentCourseSectionMarkShape a sh:NodeShape ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:GradeValueQualifierShape,
+        ceds:MarkingPeriodNameShape,
+        ceds:MidTermMarkShape,
+        ceds:StudentCourseSectionGradeEarnedShape,
+        ceds:StudentCourseSectionGradeNarrativeShape,
+        ceds:hasStudentCourseSectionMarkFinalIndicatorShape ;
+    sh:targetClass ceds:C200214 .
+
+ceds:hasAdditionalCreditTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000596 ;
+    sh:node ceds:AdditionalCreditTypeShape ;
+    sh:path ceds:P000596 .
+
+ceds:hasCourseGPAApplicabilityShape a sh:PropertyShape ;
+    sh:class ceds:C000060 ;
+    sh:node ceds:CourseGPAApplicabilityShape ;
+    sh:path ceds:P000060 .
+
+ceds:hasCourseRepeatCodeShape a sh:PropertyShape ;
+    sh:class ceds:C000065 ;
+    sh:node ceds:CourseRepeatCodeShape ;
+    sh:path ceds:P000065 .
+
+ceds:hasCourseSectionEnrollmentStatusTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000976 ;
+    sh:node ceds:CourseSectionEnrollmentStatusTypeShape ;
+    sh:path ceds:P000976 .
+
+ceds:hasCourseSectionEntryTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000650 ;
+    sh:node ceds:CourseSectionEntryTypeShape ;
+    sh:path ceds:P000650 .
+
+ceds:hasCourseSectionExitTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000652 ;
+    sh:node ceds:CourseSectionExitTypeShape ;
+    sh:path ceds:P000652 .
+
+ceds:hasCreditUnitTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000072 ;
+    sh:node ceds:CreditUnitTypeShape ;
+    sh:path ceds:P000072 .
+
+ceds:hasExitOrWithdrawalStatusShape a sh:PropertyShape ;
+    sh:class ceds:C000108 ;
+    sh:node ceds:ExitOrWithdrawalStatusShape ;
+    sh:path ceds:P000108 .
+
+ceds:hasGradeLevelWhenCourseTakenShape a sh:PropertyShape ;
+    sh:class ceds:C200000 ;
+    sh:node ceds:GradeLevelShape ;
+    sh:path ceds:P000125 .
+
+ceds:hasK12StudentCourseSectionMarkShape a sh:PropertyShape ;
+    sh:class ceds:C200214 ;
+    sh:node ceds:K12StudentCourseSectionMarkShape ;
+    sh:path ceds:P600313 .
+
+ceds:hasPreAndPostTestIndicatorShape a sh:PropertyShape ;
+    sh:class ceds:C000571 ;
+    sh:node ceds:PreAndPostTestIndicatorShape ;
+    sh:path ceds:P000571 .
+
+ceds:hasProgressLevelShape a sh:PropertyShape ;
+    sh:class ceds:C000561 ;
+    sh:node ceds:ProgressLevelShape ;
+    sh:path ceds:P000561 .
+
+ceds:hasStudentCourseSectionMarkFinalIndicatorShape a sh:PropertyShape ;
+    sh:class ceds:C001142 ;
+    sh:node ceds:StudentCourseSectionMarkFinalIndicatorShape ;
+    sh:path ceds:P001142 .
+
+ceds:hasTuitionFundedShape a sh:PropertyShape ;
+    sh:class ceds:C001575 ;
+    sh:node ceds:TuitionFundedShape ;
+    sh:path ceds:P001575 .
+

@@ -1,0 +1,83 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:K12CourseShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:CourseCertificationDescriptionShape,
+        ceds:CourseDescriptionShape,
+        ceds:CourseRepeatabilityMaximumNumberShape,
+        ceds:CourseSubjectAbbreviationShape,
+        ceds:CreditValueShape,
+        ceds:InstructionalMinutesShape,
+        ceds:SCEDSequenceOfCourseShape,
+        ceds:SequenceOfCourseShape,
+        ceds:hasCareerAndTechnicalCourseShape,
+        ceds:hasCourseApplicableEducationLevelShape,
+        ceds:hasCourseCreditUnitsShape,
+        ceds:hasCourseFundingSourceShape,
+        ceds:hasCourseLevelApprovalIndicatorShape,
+        ceds:hasCourseLevelCharacteristicShape,
+        ceds:hasCourseLevelTypeShape,
+        ceds:hasCredentialDefinitionCriteriaShape,
+        ceds:hasInstructionLanguageShape,
+        ceds:AvailableCarnegieUnitCreditShape,
+        ceds:CourseDepartmentNameShape,
+        ceds:CourseFundingProgramShape,
+        ceds:SCEDGradeSpanShape,
+        ceds:hasAdditionalCreditTypeShape,
+        ceds:hasBlendedLearningModelTypeShape,
+        ceds:hasCareerClusterShape,
+        ceds:hasCoreAcademicCourseShape,
+        ceds:hasCourseAlignedWithStandardsShape,
+        ceds:hasCourseGPAApplicabilityShape,
+        ceds:hasCourseInteractionModeShape,
+        ceds:hasCreditUnitTypeShape,
+        ceds:hasCurriculumFrameworkTypeShape,
+        ceds:hasFamilyAndConsumerSciencesCourseIndicatorShape,
+        ceds:hasHighSchoolCourseRequirementShape,
+        ceds:hasK12EndOfCourseRequirementShape,
+        ceds:hasSCEDCourseCodeShape,
+        ceds:hasSCEDCourseLevelShape,
+        ceds:hasSCEDCourseSubjectAreaShape,
+        ceds:hasWorkBasedLearningOpportunityTypeShape,
+        ceds:hasPersonShape ;
+    sh:targetClass ceds:C200186 .
+
+ceds:CareerAndTechnicalCourseShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AvailableCarnegieUnitCreditShape,
+        ceds:CourseDepartmentNameShape,
+        ceds:hasAdditionalCreditTypeShape,
+        ceds:hasCareerClusterShape,
+        ceds:hasCoreAcademicCourseShape,
+        ceds:hasCourseAlignedWithStandardsShape,
+        ceds:hasCourseGPAApplicabilityShape,
+        ceds:hasCreditUnitTypeShape,
+        ceds:hasCurriculumFrameworkTypeShape,
+        ceds:hasHighSchoolCourseRequirementShape,
+        ceds:hasSCEDCourseCodeShape,
+        ceds:hasSCEDCourseLevelShape,
+        ceds:hasSCEDCourseSubjectAreaShape ;
+    sh:targetClass ceds:C200090 .
+
+ceds:hasCareerAndTechnicalCourseShape a sh:PropertyShape ;
+    sh:class ceds:C200090 ;
+    sh:node ceds:CareerAndTechnicalCourseShape ;
+    sh:path ceds:P600443 .
+
+ceds:hasCoreAcademicCourseShape a sh:PropertyShape ;
+    sh:class ceds:C000518 ;
+    sh:node ceds:CoreAcademicCourseShape ;
+    sh:path ceds:P000518 .
+
+ceds:hasPersonShape a sh:PropertyShape ;
+    sh:class ceds:C200275 ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600510 .
+
+

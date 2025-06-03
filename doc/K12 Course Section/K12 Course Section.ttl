@@ -1,0 +1,130 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:CourseSectionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AvailableCarnegieUnitCreditShape,
+        ceds:CourseSectionMaximumCapacityShape,
+        ceds:CourseSectionTimeRequiredForCompletionShape,
+        ceds:RelatedCompetencyDefinitionsShape,
+        ceds:hasAdditionalCreditTypeShape,
+        ceds:hasAdvancedPlacementCourseCodeShape,
+        ceds:hasCourseSectionAssessmentReportingShape,
+        ceds:hasCourseSectionInstructionalDeliveryModeShape,
+        ceds:hasCourseSectionLevelShape,
+        ceds:hasCourseSectionLocationShape,
+        ceds:hasCourseSectionScheduleShape,
+        ceds:hasCourseSectionSingleSexClassStatusShape,
+        ceds:hasCourseShape,
+        ceds:hasCreditUnitTypeShape,
+        ceds:hasInstructionLanguageShape,
+        ceds:hasVirtualIndicatorShape ;
+    sh:targetClass ceds:C200074 .
+
+ceds:CourseSectionAssessmentReportingShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:hasCourseSectionAssessmentReportingMethodShape ;
+    sh:targetClass ceds:C200075 .
+
+ceds:CourseSectionLevelShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:hasCourseLevelTypeShape ;
+    sh:targetClass ceds:C200076 .
+
+ceds:CourseSectionLocationShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:hasReceivingLocationOfInstructionShape ;
+    sh:targetClass ceds:C200077 .
+
+ceds:CourseSectionScheduleShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:ClassBeginningTimeShape,
+        ceds:ClassEndingTimeShape,
+        ceds:ClassMeetingDaysShape,
+        ceds:ClassPeriodShape,
+        ceds:TimetableDayIdentifierShape ;
+    sh:targetClass ceds:C200078 .
+
+ceds:hasAdditionalCreditTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000596 ;
+    sh:node ceds:AdditionalCreditTypeShape ;
+    sh:path ceds:P000596 .
+
+ceds:hasAdvancedPlacementCourseCodeShape a sh:PropertyShape ;
+    sh:class ceds:C001278 ;
+    sh:node ceds:AdvancedPlacementCourseCodeShape ;
+    sh:path ceds:P001278 .
+
+ceds:hasCourseLevelTypeShape a sh:PropertyShape ;
+    sh:class ceds:C001312 ;
+    sh:node ceds:CourseLevelTypeShape ;
+    sh:path ceds:P001312 .
+
+ceds:hasCourseSectionAssessmentReportingMethodShape a sh:PropertyShape ;
+    sh:class ceds:C000027 ;
+    sh:node ceds:CourseSectionAssessmentReportingMethodShape ;
+    sh:path ceds:P000027 .
+
+ceds:hasCourseSectionAssessmentReportingShape a sh:PropertyShape ;
+    sh:class ceds:C200075 ;
+    sh:node ceds:CourseSectionAssessmentReportingShape ;
+    sh:path ceds:P600354 .
+
+ceds:hasCourseSectionInstructionalDeliveryModeShape a sh:PropertyShape ;
+    sh:class ceds:C001161 ;
+    sh:node ceds:CourseSectionInstructionalDeliveryModeShape ;
+    sh:path ceds:P001161 .
+
+ceds:hasCourseSectionLevelShape a sh:PropertyShape ;
+    sh:class ceds:C200076 ;
+    sh:node ceds:CourseSectionLevelShape ;
+    sh:path ceds:P600355 .
+
+ceds:hasCourseSectionLocationShape a sh:PropertyShape ;
+    sh:class ceds:C200077 ;
+    sh:node ceds:CourseSectionLocationShape ;
+    sh:path ceds:P600356 .
+
+ceds:hasCourseSectionScheduleShape a sh:PropertyShape ;
+    sh:class ceds:C200078 ;
+    sh:node ceds:CourseSectionScheduleShape ;
+    sh:path ceds:P600357 .
+
+ceds:hasCourseSectionSingleSexClassStatusShape a sh:PropertyShape ;
+    sh:class ceds:C000258 ;
+    sh:node ceds:CourseSectionSingleSexClassStatusShape ;
+    sh:path ceds:P000258 .
+
+ceds:hasCourseShape a sh:PropertyShape ;
+    sh:class ceds:C200072 ;
+    sh:node ceds:CourseShape ;
+    sh:path ceds:P600352 .
+
+ceds:hasCreditUnitTypeShape a sh:PropertyShape ;
+    sh:class ceds:C000072 ;
+    sh:node ceds:CreditUnitTypeShape ;
+    sh:path ceds:P000072 .
+
+ceds:hasInstructionLanguageShape a sh:PropertyShape ;
+    sh:class ceds:C000448 ;
+    sh:node ceds:InstructionLanguageShape ;
+    sh:path ceds:P000448 .
+
+ceds:hasReceivingLocationOfInstructionShape a sh:PropertyShape ;
+    sh:class ceds:C000524 ;
+    sh:node ceds:ReceivingLocationOfInstructionShape ;
+    sh:path ceds:P000524 .
+
+ceds:hasVirtualIndicatorShape a sh:PropertyShape ;
+    sh:class ceds:C001160 ;
+    sh:node ceds:VirtualIndicatorShape ;
+    sh:path ceds:P001160 .
+
