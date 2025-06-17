@@ -1,0 +1,48 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:IncidentShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:IncidentCostShape,
+        ceds:IncidentDateShape,
+        ceds:IncidentDescriptionShape,
+        ceds:IncidentIdentifierShape,
+        ceds:IncidentRegulationViolatedDescriptionShape,
+        ceds:IncidentTimeShape,
+        ceds:ReporterIdentifierShape,
+        ceds:hasFirearmTypeShape,
+        ceds:hasIncidentActivityShape,
+        ceds:hasIncidentBehaviorShape,
+        ceds:hasIncidentInjuryTypeShape,
+        ceds:hasIncidentLocationShape,
+        ceds:hasIncidentMultipleOffenseTypeShape,
+        ceds:hasIncidentPerpetratorInjuryTypeShape,
+        ceds:hasIncidentPersonShape,
+        ceds:hasIncidentRelatedToDisabilityManifestationShape,
+        ceds:hasIncidentReportedToLawEnforcementIndicatorShape,
+        ceds:hasIncidentReporterTypeShape,
+        ceds:hasIncidentTimeDescriptionCodeShape,
+        ceds:hasSecondaryIncidentBehaviorShape,
+        ceds:hasWeaponTypeShape ;
+    sh:targetClass ceds:C200154 .
+
+ceds:IncidentPersonShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:IncidentPerpetratorIdentifierShape,
+        ceds:IncidentVictimIdentifierShape,
+        ceds:IncidentWitnessIdentifierShape,
+        ceds:hasIncidentPerpetratorTypeShape,
+        ceds:hasIncidentPersonRoleTypeShape,
+        ceds:hasIncidentVictimTypeShape,
+        ceds:hasIncidentWitnessTypeShape ;
+    sh:targetClass ceds:C200156 .
+
+ceds:hasIncidentPersonShape a sh:PropertyShape ;
+    sh:class ceds:C200156 ;
+    sh:node ceds:IncidentPersonShape ;
+    sh:path ceds:P600094 .

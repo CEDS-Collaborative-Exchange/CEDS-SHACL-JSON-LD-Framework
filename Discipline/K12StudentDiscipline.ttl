@@ -1,0 +1,34 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:K12StudentDisciplineShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:DisciplinaryActionEndDateShape,
+        ceds:DisciplinaryActionStartDateShape,
+        ceds:DurationOfDisciplinaryActionShape,
+        ceds:hasDisciplinaryActionIEPPlacementMeetingIndicatorShape,
+        ceds:hasDisciplinaryActionTakenShape,
+        ceds:hasDisciplineActionLengthDifferenceReasonShape,
+        ceds:hasDisciplineMethodForFirearmsIncidentsShape,
+        ceds:hasDisciplineMethodOfChildrenWithDisabilitiesShape,
+        ceds:hasDisciplineReasonShape,
+        ceds:hasEducationalServicesAfterRemovalShape,
+        ceds:hasFullYearExpulsionShape,
+        ceds:hasIDEADisciplineMethodForFirearmsIncidentsShape,
+        ceds:hasIDEAInterimRemovalReasonShape,
+        ceds:hasIDEAInterimRemovalShape,
+        ceds:hasIncidentShape,
+        ceds:hasRelatedToZeroTolerancePolicyShape,
+        ceds:hasShortenedExpulsionShape ;
+    sh:targetClass ceds:C200215 .
+
+ceds:hasIncidentShape a sh:PropertyShape ;
+    sh:class ceds:C200154 ;
+    sh:node ceds:IncidentShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600314 .
+
