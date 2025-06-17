@@ -22,6 +22,7 @@ ceds:K12StudentDisciplineShape a sh:NodeShape ;
         ceds:hasIDEAInterimRemovalReasonShape,
         ceds:hasIDEAInterimRemovalShape,
         ceds:hasIncidentShape,
+        ceds:hasK12StudentEnrollmentShape,
         ceds:hasRelatedToZeroTolerancePolicyShape,
         ceds:hasShortenedExpulsionShape ;
     sh:targetClass ceds:C200215 .
@@ -31,4 +32,10 @@ ceds:hasIncidentShape a sh:PropertyShape ;
     sh:node ceds:IncidentShape ;
     sh:nodeKind sh:IRI ;
     sh:path ceds:P600314 .
+
+ceds:hasK12StudentEnrollmentShape a sh:PropertyShape ;
+    sh:class ceds:C200219 ;
+    sh:node ceds:K12StudentEnrollmentShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600550 .
 

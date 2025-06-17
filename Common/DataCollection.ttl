@@ -1,0 +1,19 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:DataCollectionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:DataCollectionAcademicSchoolYearShape,
+        ceds:DataCollectionCloseDateShape,
+        ceds:DataCollectionDescriptionShape,
+        ceds:DataCollectionNameShape,
+        ceds:DataCollectionOpenDateShape,
+        ceds:DataCollectionSchoolYearShape,
+        ceds:HasDataCollectionStatusShape,
+        ceds:SourceSystemDataCollectionIdentifierShape,
+        ceds:SourceSystemNameShape ;
+    sh:targetClass ceds:C200410 .
