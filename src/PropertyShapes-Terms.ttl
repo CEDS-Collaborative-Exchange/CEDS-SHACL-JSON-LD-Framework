@@ -14454,44 +14454,44 @@ ceds:hasHighestLevelOfEducationCompletedShape
   sh:name "Has Highest Level of Education Completed" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000725113544    # 00788 - Preschool 
-    ceds:NI000725113545    # 00790 - First grade 
-    ceds:NI000725113546    # 00791 - Second grade 
-    ceds:NI000725113547    # 00792 - Third grade 
-    ceds:NI000725113548    # 00793 - Fourth grade 
-    ceds:NI000725113549    # 00794 - Fifth grade 
-    ceds:NI000725113550    # 00795 - Sixth grade 
-    ceds:NI000725113551    # 00796 - Seventh grade 
-    ceds:NI000725113552    # 00798 - Eighth grade 
-    ceds:NI000725113553    # 00799 - Ninth grade 
-    ceds:NI000725113554    # 00800 - Tenth grade 
-    ceds:NI000725113555    # 00801 - Eleventh Grade 
-    ceds:NI000725113556    # 00803 - Grade 13
-    ceds:NI000725113557    # 00805 - Kindergarten 
-    ceds:NI000725113570    # 00819 - Career and Technical Education certificate
-    ceds:NI000725113636    # 01043 - No school completed 
-    ceds:NI000725113637    # 01044 - High school diploma 
-    ceds:NI000725113639    # 01047 - Formal award, certificate or diploma (less than one year) 
-    ceds:NI000725113641    # 01048 - Formal award, certificate or diploma (more than or equal to one year) 
-    ceds:NI000725113643    # 01049 - Some college but no degree 
-    ceds:NI000725113646    # 01050 - Associate\'s degree (two years or more) 
-    ceds:NI000725113648    # 01051 - Bachelor\'s (Baccalaureate) degree 
-    ceds:NI000725113650    # 01052 - Graduate certificate 
-    ceds:NI000725113652    # 01053 - First-professional degree 
-    ceds:NI000725113654    # 01054 - Master\'s degree (e.g., M.A., M.S., M. Eng., M.Ed., M.S.W., M.B.A., M.L.S.) 
-    ceds:NI000725113656    # 01055 - Specialist\'s degree (e.g., Ed.S.) 
-    ceds:NI000725113658    # 01056 - Post-professional degree 
-    ceds:NI000725113660    # 01057 - Doctoral (Doctor\'s) degree 
-    ceds:NI000725113707    # 01809 - 12th grade, no diploma 
-    ceds:NI000725113838    # 02408 - High school completers (e.g., certificate of attendance) 
-    ceds:NI000725113839    # 02409 - High school equivalency (e.g., GED) 
-    ceds:NI000725114370    # 09999 - Other
-    ceds:NI000725115051    # 73063 - Adult education certification, endorsement, or degree
-    ceds:NI000725115070    # 73081 - Post-master’s certificate
-    ceds:NI000725115071    # 73082 - Doctor’s degree-research/scholarship
-    ceds:NI000725115072    # 73083 - Doctor’s degree-professional practice
-    ceds:NI000725115073    # 73084 - Doctor’s degree-other
-    ceds:NI000725115074    # 73085 - Doctor’s degree-research/scholarship
+    ceds:NI000141113544    # 00788 - Preschool 
+    ceds:NI000141113545    # 00790 - First grade 
+    ceds:NI000141113546    # 00791 - Second grade 
+    ceds:NI000141113547    # 00792 - Third grade 
+    ceds:NI000141113548    # 00793 - Fourth grade 
+    ceds:NI000141113549    # 00794 - Fifth grade 
+    ceds:NI000141113550    # 00795 - Sixth grade 
+    ceds:NI000141113551    # 00796 - Seventh grade 
+    ceds:NI000141113552    # 00798 - Eighth grade 
+    ceds:NI000141113553    # 00799 - Ninth grade 
+    ceds:NI000141113554    # 00800 - Tenth grade 
+    ceds:NI000141113555    # 00801 - Eleventh Grade 
+    ceds:NI000141113556    # 00803 - Grade 13
+    ceds:NI000141113557    # 00805 - Kindergarten 
+    ceds:NI000141113570    # 00819 - Career and Technical Education certificate
+    ceds:NI000141113636    # 01043 - No school completed 
+    ceds:NI000141113637    # 01044 - High school diploma 
+    ceds:NI000141113639    # 01047 - Formal award, certificate or diploma (less than one year) 
+    ceds:NI000141113641    # 01048 - Formal award, certificate or diploma (more than or equal to one year) 
+    ceds:NI000141113643    # 01049 - Some college but no degree 
+    ceds:NI000141113646    # 01050 - Associate\'s degree (two years or more) 
+    ceds:NI000141113648    # 01051 - Bachelor\'s (Baccalaureate) degree 
+    ceds:NI000141113650    # 01052 - Graduate certificate 
+    ceds:NI000141113652    # 01053 - First-professional degree 
+    ceds:NI000141113654    # 01054 - Master\'s degree (e.g., M.A., M.S., M. Eng., M.Ed., M.S.W., M.B.A., M.L.S.) 
+    ceds:NI000141113656    # 01055 - Specialist\'s degree (e.g., Ed.S.) 
+    ceds:NI000141113658    # 01056 - Post-professional degree 
+    ceds:NI000141113660    # 01057 - Doctoral (Doctor\'s) degree 
+    ceds:NI000141113707    # 01809 - 12th grade, no diploma 
+    ceds:NI000141113838    # 02408 - High school completers (e.g., certificate of attendance) 
+    ceds:NI000141113839    # 02409 - High school equivalency (e.g., GED) 
+    ceds:NI000141114370    # 09999 - Other
+    ceds:NI000141115051    # 73063 - Adult education certification, endorsement, or degree
+    ceds:NI000141115070    # 73081 - Post-master’s certificate
+    ceds:NI000141115071    # 73082 - Doctor’s degree-research/scholarship
+    ceds:NI000141115072    # 73083 - Doctor’s degree-professional practice
+    ceds:NI000141115073    # 73084 - Doctor’s degree-other
+    ceds:NI000141115074    # 73085 - Doctor’s degree-research/scholarship
   ) ;
 .
 
@@ -15120,7 +15120,7 @@ ceds:StaffFullTimeEquivalencyShape
   sh:name "Staff Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
   sh:minInclusive "0"^^xsd:decimal ; 
-  sh:maxInclusive "1"^^xsd:decimal ; 
+  sh:maxInclusive "2"^^xsd:decimal ; 
   sh:pattern "^\\d+(\\.\\d{0,2})?$" ;
 .
 
@@ -38799,10 +38799,10 @@ ceds:RecordStatusCreatorEntityShape
   ) ;
 .
 
-ceds:RecordStatusTypeShape
+ceds:hasRecordStatusTypeShape
   a sh:PropertyShape ;
-  sh:path ceds:C001972 ;
-  sh:name "Record Status Type" ;
+  sh:path ceds:P001972 ;
+  sh:name "Has Record Status Type" ;
   sh:nodeKind sh:IRI ;
   sh:in (
     ceds:NI001972162309    # Certified - Certified
@@ -38898,3 +38898,131 @@ ceds:AuthorizationApplicationRoleNameShape
   sh:maxLength 60 ; 
 .
 
+ceds:JobIdentifierShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002123 ;
+  sh:name "Job Identifier" ;
+  sh:datatype xsd:token ;
+  sh:maxLength 60 ; 
+.
+
+ceds:JobPositionIdentifierShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002124 ;
+  sh:name "Job Position Identifier" ;
+  sh:datatype xsd:token ;
+  sh:maxLength 60 ; 
+.
+
+ceds:hasLocalJobCategoryShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002071 ;
+  sh:name "Has Local Job Category" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002071181480    # Other - Other
+  );
+.
+
+ceds:hasLocalJobFunctionShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002072 ;
+  sh:name "Has Local Job Category" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002072181481    # Other - Other
+  );
+.
+
+ceds:hasJobPositionIdentificationSystemShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002076 ;
+  sh:name "Has Job Position Identification System" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002076181489    # LEA - Local Education Agency assigned number
+    ceds:NI002076181490    # Other - Other
+    ceds:NI002076181491    # School - School-assigned number
+    ceds:NI002076181492    # SEA - State Education Agency assigned number
+  );
+.
+
+ceds:hasJobPositionStatusShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002121 ;
+  sh:name "Has Job Position Status" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002078181493    # Active - Active
+    ceds:NI002078181494    # Inactive - Inactive
+    ceds:NI002078181495    # Cancelled - Cancelled
+    ceds:NI002078181496    # Filled - Filled
+    ceds:NI002078181497    # Frozen - Frozen
+  ) ;
+.
+
+ceds:hasJobPositionStatusCancelledReasonShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002080 ;
+  sh:name "Has Job Position Status Cancelled Reason" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002080181498    # 1001 - Budgetary Reduction
+    ceds:NI002080181499    # 1003 - Enrollment Changes
+    ceds:NI002080181500    # 1002 - Organizational Restructure
+    ceds:NI002080181501    # 9999 - Other
+    ceds:NI002080181502    # 1004 - Specific Grant or Funding Expiration
+  ) ;
+.
+
+ceds:JobPositionExpectedStartDateShape
+  a sh:PropertyShape ; 
+  sh:path ceds:P002077 ;
+  sh:name "Job Position Expected Start Date" ;
+  sh:datatype xsd:dateTime ;
+.
+  
+ceds:JobPositionStatusDateShape
+  a sh:PropertyShape ; 
+  sh:path ceds:P002079 ;
+  sh:name "Job Position Status Date" ;
+  sh:datatype xsd:dateTime ;
+.
+
+ceds:hasCodingSystemOrganizationTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002073 ;
+  sh:name "Has Coding System Organization Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002073181482    # LEA - Local Education Agency
+    ceds:NI002073181484    # SEA - State Education Agency
+    ceds:NI002072181483    # Other - Other
+  ) ;
+.
+
+ceds:hasEducationJobTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002074 ;
+  sh:name "Has Education Job Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002074181485    # 1000 - Instructional
+    ceds:NI002074181488    # 1001 - Student Support Staff
+    ceds:NI002074181486    # 1002 - Non-Instructional Support and Services
+    ceds:NI002074181487    # 9999 - Other
+  ) ;
+.
+
+ceds:hasJobIdentificationSystemShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002070 ;
+  sh:name "Has Job Identification System" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002070181476    # LEA - Local Education Agency assigned number
+    ceds:NI002070181477    # Other - Other
+    ceds:NI002070181478    # School - School-assigned number
+    ceds:NI002070181479    # SEA - State Education Agency assigned number
+  );
+.
