@@ -1,0 +1,62 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:AssessmentAdministrationShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentAdministrationCodeShape,
+        ceds:AssessmentAdministrationFinishDateShape,
+        ceds:AssessmentAdministrationFinishTimeShape,
+        ceds:AssessmentAdministrationNameShape,
+        ceds:AssessmentAdministrationPeriodDescriptionShape,
+        ceds:AssessmentAdministrationStartDateShape,
+        ceds:AssessmentAdministrationStartTimeShape,
+        ceds:hasAssessmentSecureIndicatorShape,
+        ceds:hasAssessmentSessionShape,
+        ceds:hasOrganizationShape ;
+    sh:targetClass ceds:C200013 .
+
+ceds:AssessmentSessionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentSessionActualEndDateTimeShape,
+        ceds:AssessmentSessionActualStartDateTimeShape,
+        ceds:AssessmentSessionAllottedTimeShape,
+        ceds:AssessmentSessionLocationShape,
+        ceds:AssessmentSessionScheduledEndDateTimeShape,
+        ceds:AssessmentSessionScheduledStartDateTimeShape,
+        ceds:AssessmentSessionSecurityIssueShape,
+        ceds:AssessmentSessionSpecialEventDescriptionShape,
+        ceds:hasAssessmentSessionSpecialCircumstanceTypeShape,
+        ceds:hasAssessmentSessionStaffRoleShape,
+        ceds:hasAssessmentSessionTypeShape,
+        ceds:hasOrganizationShape ;
+    sh:targetClass ceds:C200049 .
+
+ceds:AssessmentSessionStaffRoleShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:hasAssessmentSessionStaffRoleTypeShape ;
+    sh:targetClass ceds:C200050 .
+
+ceds:hasAssessmentSessionShape a sh:PropertyShape ;
+    sh:class ceds:C200049 ;
+    sh:node ceds:AssessmentSessionShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600226 .
+
+ceds:hasAssessmentSessionStaffRoleShape a sh:PropertyShape ;
+    sh:class ceds:C200050 ;
+    sh:node ceds:AssessmentSessionStaffRoleShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600230 .
+
+ceds:hasOrganizationShape a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
+    sh:node ceds:OrganizationShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600062 .
+

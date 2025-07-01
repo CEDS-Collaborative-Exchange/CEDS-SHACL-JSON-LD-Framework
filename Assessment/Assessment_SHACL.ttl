@@ -1,0 +1,149 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceds:AssessmentShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentAdministrationAssessmentFamilyShape,
+        ceds:AssessmentFamilyShortNameShape,
+        ceds:AssessmentFamilyTitleShape,
+        ceds:AssessmentIdentifierShape,
+        ceds:AssessmentObjectiveShape,
+        ceds:AssessmentProviderShape,
+        ceds:AssessmentRevisionDateShape,
+        ceds:AssessmentShortNameShape,
+        ceds:AssessmentTitleShape,
+        ceds:hasAssessmentAcademicSubjectShape,
+        ceds:hasAssessmentEarlyLearningDevelopmentalDomainShape,
+        ceds:hasAssessmentFormShape,
+        ceds:hasAssessmentIdentificationSystemShape,
+        ceds:hasAssessmentLanguageShape,
+        ceds:hasAssessmentPurposeShape,
+        ceds:hasAssessmentTypeAdministeredShape,
+        ceds:hasAssessmentTypeAdministeredToEnglishLearnersShape,
+        ceds:hasAssessmentTypeShape,
+        ceds:hasGradeLevelShape ;
+    sh:targetClass ceds:C200010 .
+
+ceds:AssessmentAssetShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentAssetContentMimeTypeShape,
+        ceds:AssessmentAssetContentURLShape,
+        ceds:AssessmentAssetContentXMLShape,
+        ceds:AssessmentAssetIdentifierShape,
+        ceds:AssessmentAssetNameShape,
+        ceds:AssessmentAssetOwnerShape,
+        ceds:AssessmentAssetPublishedDateShape,
+        ceds:AssessmentAssetVersionShape,
+        ceds:hasAssessmentAssetIdentifierTypeShape,
+        ceds:hasAssessmentAssetTypeShape,
+        ceds:hasAssessmentLanguageShape,
+        ceds:hasLearningResourceShape ;
+    sh:targetClass ceds:C200015 .
+
+ceds:AssessmentFormAssessmentFormSectionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentFormSectionSequenceNumberShape,
+        ceds:hasAssessmentFormSectionShape ;
+    sh:targetClass ceds:C200019 .
+
+ceds:AssessmentFormSectionShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentFormSectionIdentifierShape,
+        ceds:AssessmentFormSectionTimeLimitShape,
+        ceds:AssessmentFormSectionVersionShape,
+        ceds:AssessmentItemBankIdentifierShape,
+        ceds:AssessmentItemBankNameShape,
+        ceds:LearningResourcePublishedDateShape,
+        ceds:hasAssessmentAssetShape,
+        ceds:hasAssessmentFormSectionAssessmentItemShape,
+        ceds:hasAssessmentFormSectionReentryShape,
+        ceds:hasAssessmentFormSectionSealedShape,
+        ceds:hasAssessmentFormSectionShape,
+        ceds:hasIdentificationSystemForAssessmentFormSectionShape,
+        ceds:hasLearningResourceShape ;
+    sh:targetClass ceds:C200020 .
+
+ceds:AssessmentFormShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type rdf:id rdf:value rdfs:label ) ;
+    sh:property ceds:AssessmentFormAccommodationListShape,
+        ceds:AssessmentFormAlgorithmIdentifierShape,
+        ceds:AssessmentFormAlgorithmVersionShape,
+        ceds:AssessmentFormIntendedAdministrationEndDateShape,
+        ceds:AssessmentFormNameShape,
+        ceds:AssessmentFormNumberShape,
+        ceds:AssessmentFormPlatformsSupportedShape,
+        ceds:AssessmentFormVersionShape,
+        ceds:AssessmentItemBankIdentifierShape,
+        ceds:AssessmentItemBankNameShape,
+        ceds:IntendedAdministrationStartDateShape,
+        ceds:LearningResourcePublishedDateShape,
+        ceds:hasAssessmentAssetShape,
+        ceds:hasAssessmentFormAdaptiveIndicatorShape,
+        ceds:hasAssessmentFormAssessmentFormSectionShape,
+        ceds:hasAssessmentLanguageShape,
+        ceds:hasAssessmentSecureIndicatorShape,
+        ceds:hasLearningResourceShape ;
+    sh:targetClass ceds:C200017 .
+
+ceds:hasAssessmentEarlyLearningDevelopmentalDomainShape a sh:PropertyShape ;
+    sh:class ceds:C200016 ;
+    sh:node ceds:AssessmentEarlyLearningDevelopmentalDomainShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600065 .
+
+ceds:hasAssessmentFormAssessmentFormSectionShape a sh:PropertyShape ;
+    sh:class ceds:C200019 ;
+    sh:node ceds:AssessmentFormAssessmentFormSectionShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600069 .
+
+ceds:hasAssessmentFormSectionAssessmentItemShape a sh:PropertyShape ;
+    sh:class ceds:C200022 ;
+    sh:node ceds:AssessmentFormSectionAssessmentItemShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600074 .
+
+ceds:hasAssessmentFormShape a sh:PropertyShape ;
+    sh:class ceds:C200017 ;
+    sh:node ceds:AssessmentFormShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600066 .
+
+ceds:hasGradeLevelShape a sh:PropertyShape ;
+    sh:class ceds:C200000 ;
+    sh:node ceds:GradeLevelShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600206 .
+
+ceds:hasAssessmentAssetShape a sh:PropertyShape ;
+    sh:class ceds:C200015 ;
+    sh:node ceds:AssessmentAssetShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600068 .
+
+ceds:hasAssessmentFormSectionShape a sh:PropertyShape ;
+    sh:class ceds:C200020 ;
+    sh:node ceds:AssessmentFormSectionShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600070 .
+
+ceds:hasAssessmentLanguageShape a sh:PropertyShape ;
+    sh:class ceds:C200031 ;
+    sh:node ceds:AssessmentLanguageShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600134 .
+
+ceds:hasLearningResourceShape a sh:PropertyShape ;
+    sh:class ceds:C200228 ;
+    sh:node ceds:LearningResourceShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P600063 .
+
