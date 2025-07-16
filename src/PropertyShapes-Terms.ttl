@@ -35919,6 +35919,7 @@ ceds:LearningResourceCopyrightHolderNameShape
 ceds:hasLearningResourceDigitalMediaSubTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P001396 ;
+  sh:nodeKind sh:IRI ;
   sh:name "Has Learning Resource Digital Media Sub Type" ;
 .
 

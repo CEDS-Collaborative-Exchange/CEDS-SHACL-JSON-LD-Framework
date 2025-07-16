@@ -2095,7 +2095,12 @@
         "hasLearningResourceBookFormatType": "P001394",
         "hasLearningResourceCompetencyAlignmentType": "P000879",
         "hasLearningResourceControlFlexibilityType": "P001395",
-        "hasLearningResourceDigitalMediaSubType": "P001396",
+        "hasLearningResourceDigitalMediaSubType":
+        {
+            "@id": "P001396",
+            "@type": "@id",
+            "@context": { "@base": "http://ceds.ed.gov/terms/iana-mime/" }
+        },
         "hasLearningResourceDigitalMediaType": "P001397",
         "hasLearningResourceEducationalUse": "P001002",
         "hasLearningResourceIdentificationSystem": "P002028",
@@ -2639,7 +2644,6 @@
         "LearningResourceAccessModeType": "C001391",
         "LearningResourceBookFormatType": "C001394",
         "LearningResourceControlFlexibilityType": "C001395",
-        "LearningResourceDigitalMediaSubType": "C001396",
         "LearningResourceDigitalMediaType": "C001397",
         "LearningResourceEducationalUse": "C001002",
         "LearningResourceMediaFeatureType": "C001399",
