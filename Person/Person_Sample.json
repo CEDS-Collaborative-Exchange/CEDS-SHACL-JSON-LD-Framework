@@ -1,0 +1,139 @@
+{
+    "@context": "https://ceds.ed.gov/jsonld/2025/v13/context.json",
+    "@type": "Person",
+    "@id": "http://ceds.ed.gov/person/38330",
+    "RecordStartDateTime": {
+        "@value": "2002-06-24T15:33:00.403",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "RecordEndDateTime": {
+        "@value": "9999-12-31T00:00:00.000",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasPersonDemographicRace": [
+        {
+            "@type": "PersonDemographicRace", 
+            "hasRaceAndEthnicity": [
+                "RaceAndEthnicity_Asian",
+                "RaceAndEthnicity_HispanicOrLatinoEthnicity"
+            ],
+            "hasRecordStatus": {
+                "@type": "RecordStatus",
+                "CommittedByOrganization": { "@id": "http://ceds.ed.gov/organization/1000000001" }
+            }
+        },
+        {
+            "@type": "PersonDemographicRace", 
+            "hasRaceAndEthnicity": [
+                "RaceAndEthnicity_White",
+                "RaceAndEthnicity_BlackOrAfricanAmerican"
+            ],
+            "hasRecordStatus": {
+                "@type": "RecordStatus",
+                "CommittedByOrganization": { "@id": "http://ceds.ed.gov/organization/2000000045" }
+            }
+        },
+        {
+            "@type": "PersonDemographicRace", 
+            "hasRaceAndEthnicity": [
+                "RaceAndEthnicity_AmericanIndianOrAlaskaNative"
+            ],
+            "hasRecordStatus": {
+                "@type": "RecordStatus",
+                "CommittedByOrganization": { "@id": "http://ceds.ed.gov/organization/3000000789" }
+            }
+        }
+    ],
+    "hasPersonIdentification": [
+        {
+            "@type": "PersonIdentification",
+            "PersonIdentifier": {
+                "@value": "989897099",
+                "@type": "http://www.w3.org/2001/XMLSchema#token"
+            },
+            "hasPersonIdentificationSystem": "PersonIdentificationSystem_SSN",
+            "hasPersonIdentifierType": "PersonIdentifierType_PersonIdentifier",
+            "RecordStartDateTime": {
+                "@value": "2002-06-24T15:33:00.403",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "RecordEndDateTime": {
+                "@value": "9999-12-31T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+        },
+        {
+            "@type": "PersonIdentification",
+            "PersonIdentifier": {
+                "@value": "40420",
+                "@type": "http://www.w3.org/2001/XMLSchema#token"
+            },
+            "hasPersonIdentificationSystem": "PersonIdentificationSystem_EducatorID",
+            "hasPersonIdentifierType": "PersonIdentifierType_StaffMemberIdentifier",
+            "RecordStartDateTime": {
+                "@value": "2020-06-13T13:12:51.457",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "RecordEndDateTime": {
+                "@value": "9999-12-31T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+        },
+        {
+            "@type": "PersonIdentification",
+            "PersonIdentifier": {
+                "@value": "6202378625",
+                "@type": "http://www.w3.org/2001/XMLSchema#token"
+            },
+            "hasPersonIdentificationSystem": "PersonIdentificationSystem_State",
+            "hasPersonIdentifierType": "PersonIdentifierType_StudentIdentifier",
+            "RecordStartDateTime": {
+                "@value": "1900-01-01T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "RecordEndDateTime": {
+                "@value": "9999-12-31T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+        },
+        {
+            "@type": "PersonIdentification",
+            "PersonIdentifier": {
+                "@value": "124031",
+                "@type": "http://www.w3.org/2001/XMLSchema#token"
+            },
+            "hasPersonIdentificationSystem": "PersonIdentificationSystem_SSN",
+            "hasPersonIdentifierType": "PersonIdentifierType_StaffMemberIdentifier",
+            "RecordStartDateTime": {
+                "@value": "1900-01-01T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "RecordEndDateTime": {
+                "@value": "9999-12-31T00:00:00.000",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+        }
+    ],
+    "hasPersonBirth": {
+        "@type": "PersonBirth",
+        "Birthdate": {
+            "@value": "1965-05-15",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+    },
+    "hasPersonName": {
+        "@type": "PersonName",
+        "FirstName": "EDITH",
+        "LastOrSurname": "ADAMS",
+        "MiddleName": "M",
+        "GenerationCodeOrSuffix": "III"
+    },
+    "hasPersonSexGender": {
+        "@type": "PersonSexGender",
+        "hasSex": "Sex_Female"
+    },
+    "hasDataCollection": {
+        "@id": "http://example.org/dataCollection/45678",
+        "@type": "DataCollection"
+    }
+}
