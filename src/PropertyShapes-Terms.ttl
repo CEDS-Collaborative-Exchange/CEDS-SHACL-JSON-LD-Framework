@@ -11,13 +11,13 @@ ceds:RecordStartDateTimeShape
 
 ceds:RecordEndDateTimeShape
   a sh:PropertyShape ;
-  sh:path ceds:P201005 ;
+  sh:path ceds:P001918 ;
   sh:name "Record End Date Time" ;
   sh:datatype xsd:dateTime ;
 .
 ceds:RecordStatusDateShape
   a sh:PropertyShape ;
-  sh:path ceds:P200998 ;
+  sh:path ceds:P001973 ;
   sh:name "Record Status Date" ;
   sh:datatype xsd:dateTime ;
 .
@@ -73,6 +73,27 @@ ceds:hasOrganizationIdentificationSystemShape
     ceds:NI000827151971    # SEA - State Education Agency assigned number
     ceds:NI000827151972    # LicenseNumber - License Number
     ceds:NI000827151973    # SAM - System for Award Management Unique Entity Identifier
+  ) ;
+.
+
+ceds:hasOrganizationIdentifierTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002133 ;
+  sh:name "Has Organization Identifier Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002133000006     # Activity Identifier
+    ceds:NI002133000111     # Federal School Code
+    ceds:NI002133000166     # Institution IPEDS UnitID
+    ceds:NI002133000175     # Local Education Agency Supervisory Union Identification Number
+    ceds:NI002133000203     # Office of Postsecondary Education Identifier
+    ceds:NI002133000625     # Program Identifier
+    ceds:NI002133000781     # Adult Education Service Provider Identification System
+    ceds:NI002133000827     # Organization Identification System
+    ceds:NI002133000978     # Course Section Identifier
+    ceds:NI002133001072     # Local Education Agency Identification System
+    ceds:NI002133001073     # School Identification System
+    ceds:NI002133001315     # Course Section Number
   ) ;
 .
 
@@ -566,30 +587,30 @@ ceds:WebSiteAddressShape
 ceds:hasGradeLevelShape 
   a sh:PropertyShape ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
   sh:name "Grade Level" ;
   sh:nodeKind sh:IRI ;
@@ -601,30 +622,30 @@ ceds:hasGradeLevelShape
     sh:path ceds:P001926 ;
     sh:name "Grade Levels Approved" ;
     sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
 
     ) ;
   .
@@ -3846,10 +3867,10 @@ ceds:hasFederalRaceAndEthnicityDeclinedShape
   ) ;
 .
 
-ceds:hasRaceShape
+ceds:hasRaceAndEthnicityShape
   a sh:PropertyShape ;
   sh:path ceds:P001943 ;
-  sh:name "Has Race" ;
+  sh:name "Has Race And Ethnicity" ;
   sh:minCount 0 ;
   sh:in (
       ceds:NI001943162282  # RaceAndEthnicityUnknown
@@ -3859,6 +3880,7 @@ ceds:hasRaceShape
       ceds:NI001943162279  # BlackOrAfricanAmerican
       ceds:NI001943162281  # NativeHawaiianOrOtherPacificIslander
       ceds:NI001943162283  # White
+      ceds:NI001943162284  # HispanicOrLatinoEthnicity
     ) ;
     sh:xone (
     [
@@ -3883,6 +3905,7 @@ ceds:hasRaceShape
         ceds:NI001943162279  # BlackOrAfricanAmerican
         ceds:NI001943162281  # NativeHawaiianOrOtherPacificIslander
         ceds:NI001943162283  # White
+        ceds:NI001943162283  # HispanicOrLatinoEthnicity
       ) ;
       sh:minCount 1
     ]
@@ -13255,7 +13278,7 @@ ceds:hasRoleShape
 
 ceds:hasPersonIdentificationSystemShape
   a sh:PropertyShape ;
-  sh:path ceds:P600545 ;
+  sh:path ceds:P001571 ;
   sh:name "Has Person Identification System" ;
   sh:nodeKind sh:IRI ;
   sh:in (
@@ -13284,10 +13307,10 @@ ceds:hasPersonIdentificationSystemShape
   ) ;
 .
 
-ceds:hasPersonIdentificationTypeShape
+ceds:hasPersonIdentifierTypeShape
   a sh:PropertyShape ;
-  sh:path ceds:P600546 ;
-  sh:name "Has Person Identification Type" ;
+  sh:path ceds:P002114 ;
+  sh:name "Has Person Identifier Type" ;
   sh:nodeKind sh:IRI ;
   sh:in (
     ceds:NI002114100000    # PersonIdentifier - Person Identifier
@@ -15260,8 +15283,8 @@ ceds:hasMEPPersonnelIndicatorShape
   sh:name "Has Migrant Education Program Personnel Indicator" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000301100001    # Yes - Yes
-    ceds:NI000301100002    # No - No
+    ceds:NI000543100001    # Yes - Yes
+    ceds:NI000543100002    # No - No
   ) ;
 .
 
@@ -20512,30 +20535,30 @@ ceds:hasEntryGradeLevelShape
   sh:name "Has Entry Grade Level" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
 
     ) ;
 .
@@ -20578,30 +20601,30 @@ ceds:hasExitGradeLevelShape
   sh:name "Has Exit Grade Level" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
 .
 
@@ -20890,30 +20913,30 @@ ceds:hasGradeLevelWhenCourseTakenShape
   sh:name "Has Grade Level When Course Taken" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
 .
 
@@ -23810,30 +23833,30 @@ ceds:hasCourseApplicableEducationLevelShape
   sh:name "Has Course Applicable Education Level" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
 
 .
@@ -30987,30 +31010,30 @@ ceds:hasAssessmentRegistrationGradeLevelToBeAssessedShape
   sh:name "Has Assessment Registration Grade Level to Be Assessed" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
 .
 
@@ -31054,30 +31077,30 @@ ceds:hasGradeLevelWhenAssessedShape
   sh:name "Has Grade Level When Assessed" ;
   sh:nodeKind sh:IRI ;
   sh:in ( 
-    ceds:NI200000181504 # Prenatal - Prenatal
-    ceds:NI200000181515 # Birth - Birth
-    ceds:NI200000181521 # IT - Infant/Toddler
-    ceds:NI200000181522 # PR - Preschool
-    ceds:NI200000181523 # PK - Prekindergarten
-    ceds:NI200000181524 # TK - Transitional Kindergarten
-    ceds:NI200000181525 # KG - Kindergarten
-    ceds:NI200000181526 # 01 - First Grade
-    ceds:NI200000181527 # 02 - Second Grade
-    ceds:NI200000181505 # 03 - Third Grade
-    ceds:NI200000181506 # 04 - Fourth Grade
-    ceds:NI200000181507 # 05 - Fifth Grade
-    ceds:NI200000181508 # 06 - Sixth Grade
-    ceds:NI200000181509 # 07 - Seventh Grade
-    ceds:NI200000181510 # 08 - Eighth Grade
-    ceds:NI200000181511 # 09 - Ninth Grade
-    ceds:NI200000181512 # 10 - Tenth Grade
-    ceds:NI200000181513 # 11 - Eleventh Grade
-    ceds:NI200000181514 # 12 - Twelfth Grade
-    ceds:NI200000181516 # 13 - Grade 13
-    ceds:NI200000181517 # PS - Postsecondary
-    ceds:NI200000181518 # UG - Ungraded
-    ceds:NI200000181519 # AE - Adult Education
-    ceds:NI200000181520 # Other - Other
+    ceds:NI002175181504 # Prenatal - Prenatal
+    ceds:NI002175181515 # Birth - Birth
+    ceds:NI002175181521 # IT - Infant/Toddler
+    ceds:NI002175181522 # PR - Preschool
+    ceds:NI002175181523 # PK - Prekindergarten
+    ceds:NI002175181524 # TK - Transitional Kindergarten
+    ceds:NI002175181525 # KG - Kindergarten
+    ceds:NI002175181526 # 01 - First Grade
+    ceds:NI002175181527 # 02 - Second Grade
+    ceds:NI002175181505 # 03 - Third Grade
+    ceds:NI002175181506 # 04 - Fourth Grade
+    ceds:NI002175181507 # 05 - Fifth Grade
+    ceds:NI002175181508 # 06 - Sixth Grade
+    ceds:NI002175181509 # 07 - Seventh Grade
+    ceds:NI002175181510 # 08 - Eighth Grade
+    ceds:NI002175181511 # 09 - Ninth Grade
+    ceds:NI002175181512 # 10 - Tenth Grade
+    ceds:NI002175181513 # 11 - Eleventh Grade
+    ceds:NI002175181514 # 12 - Twelfth Grade
+    ceds:NI002175181516 # 13 - Grade 13
+    ceds:NI002175181517 # PS - Postsecondary
+    ceds:NI002175181518 # UG - Ungraded
+    ceds:NI002175181519 # AE - Adult Education
+    ceds:NI002175181520 # Other - Other
     ) ;
 .
 
@@ -38749,16 +38772,14 @@ ceds:DataCollectionAcademicSchoolYearShape
   a sh:PropertyShape ;
   sh:path ceds:P001970 ;
   sh:name "Data Collection Academic School Year" ;
-  sh:datatype xsd:string ;
-  sh:pattern "^(19|20)\\d{2}$" ; 
+  sh:datatype xsd:gYear ;
 .
  
 ceds:DataCollectionSchoolYearShape
   a sh:PropertyShape ;
   sh:path ceds:P001971 ;
   sh:name "Data Collection School Year" ;
-  sh:datatype xsd:string ;
-  sh:pattern "^(19|20)\\d{2}$" ; 
+  sh:datatype xsd:gYear ;
 .
 
 ceds:DataCollectionCloseDateShape
@@ -38814,13 +38835,6 @@ ceds:hasRecordStatusTypeShape
     ceds:NI001972162314    # Retired - Retired
     ceds:NI001972162315    # Submitted - Submitted
   ) ;
-.
-
-ceds:RecordStatusDateShape
-  a sh:PropertyShape ;
-  sh:path ceds:P200998 ;
-  sh:name "Record Status Date" ;
-  sh:datatype xsd:dateTime ;
 .
 
 ceds:AuthenticationIdentityProviderNameShape
