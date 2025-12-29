@@ -15,9 +15,9 @@ ceds:P201005Shape
   sh:name "Record End Date Time" ;
   sh:datatype xsd:dateTime ;
 .
-ceds:P200998Shape
+ceds:P001973Shape
   a sh:PropertyShape ;
-  sh:path ceds:P200998 ;
+  sh:path ceds:P001973 ;
   sh:name "Record Status Date" ;
   sh:datatype xsd:dateTime ;
 .
@@ -38757,13 +38757,6 @@ ceds:C001972Shape
     ceds:NI001972162314    # Retired - Retired
     ceds:NI001972162315    # Submitted - Submitted
   ) ;
-.
-
-ceds:P200998Shape
-  a sh:PropertyShape ;
-  sh:path ceds:P200998 ;
-  sh:name "Record Status Date" ;
-  sh:datatype xsd:dateTime ;
 .
 
 ceds:P001168Shape
