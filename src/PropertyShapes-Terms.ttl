@@ -197,7 +197,7 @@ ceds:AddressApartmentRoomOrSuiteNumberShape
   sh:path ceds:P000019 ;
   sh:name "Address Apartment Room or Suite Number" ;
   sh:datatype xsd:string ;
-  sh:maxLength 30 ;
+  sh:maxLength 60 ;
 .
 
 ceds:hasAssessmentAcademicSubjectShape
@@ -1853,7 +1853,7 @@ ceds:FirstNameShape
   sh:path ceds:P000115 ;
   sh:name "First Name" ;
   sh:datatype xsd:string ;
-  sh:maxLength 35 ;
+  sh:maxLength 75 ;
 .
 
 ceds:hasFirstTimePostsecondaryStudentShape
@@ -2383,7 +2383,7 @@ ceds:LastOrSurnameShape
   sh:path ceds:P000172 ;
   sh:name "Last or Surname" ;
   sh:datatype xsd:string ;
-  sh:maxLength 35 ;
+  sh:maxLength 75 ;
 .
 
 ceds:hasLEAImprovementStatusShape
@@ -2514,7 +2514,7 @@ ceds:MiddleNameShape
   sh:path ceds:P000184 ;
   sh:name "Middle Name" ;
   sh:datatype xsd:string ;
-  sh:maxLength 35 ;
+  sh:maxLength 75 ;
 .
 
 ceds:hasMigrantEducationProgramParticipationStatusShape
@@ -3611,7 +3611,7 @@ ceds:AddressStreetNumberAndNameShape
   sh:path ceds:P000269 ;
   sh:name "Address Street Number and Name" ;
   sh:datatype xsd:string ;
-  sh:maxLength 40 ;
+  sh:maxLength 150 ;
 .
 
 ceds:StudentAttendanceRateShape
@@ -4182,6 +4182,8 @@ ceds:hasLanguageTypeShape
     ceds:NI000316151871    # Other
     ceds:NI000316151872    # Other language proficiency
     ceds:NI000316151873    # Correspondence
+
+		
     ceds:NI000316151874    # Native language
     ceds:NI000316151875    # Home language
     ceds:NI000316151876    # Dominant language
@@ -8129,7 +8131,7 @@ ceds:CourseDescriptionShape
   sh:path ceds:P000517 ;
   sh:name "Course Description" ;
   sh:datatype xsd:string ;
-  sh:maxLength 60 ;
+  sh:maxLength 1024 ;
 .
 
 ceds:hasCoreAcademicCourseShape
@@ -9042,7 +9044,7 @@ ceds:BuildingSiteNumberShape
   sh:path ceds:P000602 ;
   sh:name "Building Site Number" ;
   sh:datatype xsd:string ;
-  sh:maxLength 30 ;
+  sh:maxLength 60 ;
 .
 
 ceds:hasCalendarEventTypeShape
@@ -17762,7 +17764,7 @@ ceds:AssessmentIdentifierShape
   sh:path ceds:P001067 ;
   sh:name "Assessment Identifier" ;
   sh:datatype xsd:string ;
-  sh:maxLength 40 ;
+  sh:maxLength 100 ;
 .
 
 ceds:LocalEducationAgencyIdentifierShape
@@ -34674,6 +34676,7 @@ ceds:FinancialAccountingPeriodEncumberedValueShape
   sh:path ceds:P001644 ;
   sh:name "Financial Accounting Period Encumbered Value" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:FinancialAccountProgramNameShape
@@ -34697,6 +34700,7 @@ ceds:FinancialAccountingValueShape
   sh:path ceds:P001647 ;
   sh:name "Financial Accounting Value" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:FinancialAccountingDateShape
@@ -38691,7 +38695,7 @@ ceds:HazardousMaterialOrConditionDescriptionShape
   sh:path ceds:P001844 ;
   sh:name "Hazardous Material or Condition Description" ;
   sh:datatype xsd:string ;
-  sh:maxLength 80 ;
+  sh:maxLength 300 ;
 .
 
 ceds:HazardousMaterialOrConditionTestingDateShape
@@ -39583,6 +39587,7 @@ ceds:FullTimeEquivalencyShape
   sh:path ceds:P001921 ;
   sh:name "Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasProgramEntryReasonShape
@@ -39590,6 +39595,7 @@ ceds:hasProgramEntryReasonShape
   sh:path ceds:P001922 ;
   sh:name "Has Program Entry Reason" ;
   sh:datatype xsd:string ;
+  sh:maxLength 300 ;
 .
 
 ceds:hasComprehensiveSupportAndImprovementStatusShape
@@ -39806,6 +39812,7 @@ ceds:CohortMedianEarningsShape
   sh:path ceds:P001938 ;
   sh:name "Cohort Median Earnings" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasAdultEducationProgramExitReasonShape
@@ -40017,6 +40024,7 @@ ceds:NumberofDaysTardyShape
   sh:path ceds:P001957 ;
   sh:name "Number of Days Tardy" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasStaffCompensationSourceTypeShape
@@ -40036,6 +40044,7 @@ ceds:StaffCompensationAnnualSupplementShape
   sh:path ceds:P001959 ;
   sh:name "Staff Compensation Annual Supplement" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:StaffCompensationLongevityShape
@@ -40043,6 +40052,7 @@ ceds:StaffCompensationLongevityShape
   sh:path ceds:P001960 ;
   sh:name "Staff Compensation Longevity" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasEDFactsTeacherInexperiencedStatusShape
@@ -40298,6 +40308,7 @@ ceds:StaffEvaluationPartScaleShape
   sh:path ceds:P001987 ;
   sh:name "Staff Evaluation Part Scale" ;
   sh:datatype xsd:string ;
+  sh:maxLength 80 ;
 .
 
 ceds:hasHomeLanguageSurveyAdministrationIndicatorShape
@@ -40575,6 +40586,7 @@ ceds:AttendanceEventDurationMinutesShape
   sh:path ceds:P002014 ;
   sh:name "Attendance Event Duration Minutes" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:AttendanceEventDurationHoursShape
@@ -40582,6 +40594,7 @@ ceds:AttendanceEventDurationHoursShape
   sh:path ceds:P002015 ;
   sh:name "Attendance Event Duration Hours" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasDEIPolicyIndicatorShape
@@ -40708,6 +40721,7 @@ ceds:SequenceOfCourseShape
   sh:path ceds:P002023 ;
   sh:name "Sequence of Course" ;
   sh:datatype xsd:string ;
+  sh:maxLength 10 ;
 .
 
 ceds:TemperatureControlledBuildingAreaShape
@@ -40715,6 +40729,7 @@ ceds:TemperatureControlledBuildingAreaShape
   sh:path ceds:P002024 ;
   sh:name "Temperature Controlled Building Area" ;
   sh:datatype xsd:string ;
+  sh:maxLength 30 ;
 .
 
 ceds:hasMostPrevalentLevelOfInstitutionShape
@@ -40779,6 +40794,7 @@ ceds:RecordReferenceIdentifierShape
   sh:path ceds:P002029 ;
   sh:name "Record Reference Identifier" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasRecordReferenceIdentificationSystemShape
@@ -40823,6 +40839,7 @@ ceds:LearningResourceStatusQuantityShape
   sh:path ceds:P002033 ;
   sh:name "Learning Resource Status Quantity" ;
   sh:datatype xsd:int ;
+  sh:minLength 0 ;
 .
 
 ceds:hasMilitaryCountryShape
@@ -41187,6 +41204,7 @@ ceds:MilitaryInductionRankShape
   sh:path ceds:P002045 ;
   sh:name "Military Induction Rank" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:MilitaryDischargeRankShape
@@ -41194,6 +41212,7 @@ ceds:MilitaryDischargeRankShape
   sh:path ceds:P002046 ;
   sh:name "Military Discharge Rank" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:MilitaryHighestRankShape
@@ -41201,6 +41220,7 @@ ceds:MilitaryHighestRankShape
   sh:path ceds:P002047 ;
   sh:name "Military Highest Rank" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:MilitaryCurrentRankShape
@@ -41208,6 +41228,7 @@ ceds:MilitaryCurrentRankShape
   sh:path ceds:P002048 ;
   sh:name "Military Current Rank" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:MilitaryHonorsShape
@@ -41215,6 +41236,7 @@ ceds:MilitaryHonorsShape
   sh:path ceds:P002049 ;
   sh:name "Military Honors" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasMilitaryCampaignsShape
@@ -41255,6 +41277,7 @@ ceds:MilitaryDeploymentDescriptionShape
   sh:path ceds:P002052 ;
   sh:name "Military Deployment Description" ;
   sh:datatype xsd:string ;
+  sh:maxLength 200 ;
 .
 
 ceds:MilitaryDeploymentOrderDescriptionShape
@@ -41262,6 +41285,7 @@ ceds:MilitaryDeploymentOrderDescriptionShape
   sh:path ceds:P002053 ;
   sh:name "Military Deployment Order Description" ;
   sh:datatype xsd:string ;
+  sh:maxLength 200 ;
 .
 
 ceds:MilitaryDeploymentRequestedByShape
@@ -41269,6 +41293,7 @@ ceds:MilitaryDeploymentRequestedByShape
   sh:path ceds:P002054 ;
   sh:name "Military Deployment Requested By" ;
   sh:datatype xsd:string ;
+  sh:maxLength 100 ;
 .
 
 ceds:MilitaryDeploymentActivityCodeShape
@@ -41276,6 +41301,7 @@ ceds:MilitaryDeploymentActivityCodeShape
   sh:path ceds:P002055 ;
   sh:name "Military Deployment Activity Code" ;
   sh:datatype xsd:string ;
+  sh:maxLength 200 ;
 .
 
 ceds:MilitaryDeploymentActivityNameShape
@@ -41283,6 +41309,7 @@ ceds:MilitaryDeploymentActivityNameShape
   sh:path ceds:P002056 ;
   sh:name "Military Deployment Activity Name" ;
   sh:datatype xsd:string ;
+  sh:maxLength 400 ;
 .
 
 ceds:hasNationalGuardIndicatorShape
@@ -41302,6 +41329,7 @@ ceds:FundingSourcePercentageShape
   sh:path ceds:P002058 ;
   sh:name "Funding Source Percentage" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:FundingSourceAmountShape
@@ -41309,6 +41337,7 @@ ceds:FundingSourceAmountShape
   sh:path ceds:P002059 ;
   sh:name "Funding Source Amount" ;
   sh:datatype xsd:decimal ;
+  sh:maxLength 40 ;
 .
 
 ceds:YearsOfTotalExperienceShape
@@ -41316,6 +41345,7 @@ ceds:YearsOfTotalExperienceShape
   sh:path ceds:P002060 ;
   sh:name "Years of Total Experience" ;
   sh:datatype xsd:int ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:YearsOfPriorProfessionalExperienceShape
@@ -41342,6 +41372,7 @@ ceds:OrganizationJurisdictionSquareMilesShape
   sh:path ceds:P002063 ;
   sh:name "Organization Jurisdiction Square Miles" ;
   sh:datatype xsd:int ;
+  sh:fractionDigits 4 ;
 .
 
 ceds:StaffCompensationAnnualSupplementDescriptionShape
@@ -41349,6 +41380,7 @@ ceds:StaffCompensationAnnualSupplementDescriptionShape
   sh:path ceds:P002064 ;
   sh:name "Staff Compensation Annual Supplement Description" ;
   sh:datatype xsd:string ;
+  sh:maxLength 300 ;
 .
 
 ceds:hasCourseFundingProgramAllowedShape
@@ -41403,6 +41435,7 @@ ceds:JobIdentifierShape
   sh:path ceds:P002069 ;
   sh:name "Job Identifier" ;
   sh:datatype xsd:token ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasJobIdentificationSystemShape
@@ -41468,6 +41501,7 @@ ceds:JobPositionIdentifierShape
   sh:path ceds:P002075 ;
   sh:name "Job Position Identifier" ;
   sh:datatype xsd:token ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasJobPositionIdentificationSystemShape
@@ -41774,6 +41808,7 @@ ceds:AttendanceEventDurationDayShape
   sh:path ceds:P002098 ;
   sh:name "Attendance Event Duration Day" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:InstructionalMinutesPerDayShape
@@ -41843,6 +41878,7 @@ ceds:SalaryScheduleCriterionNameShape
   sh:path ceds:P002106 ;
   sh:name "Salary Schedule Criterion Name" ;
   sh:datatype xsd:string ;
+  sh:maxLength 60 ;
 .
 
 ceds:SalaryScheduleCriterionDescriptionShape
@@ -41857,6 +41893,7 @@ ceds:SalaryScheduleCriterionValueShape
   sh:path ceds:P002108 ;
   sh:name "Salary Schedule Criterion Value" ;
   sh:datatype xsd:string ;
+  sh:maxLength 60 ;
 .
 
 ceds:SalaryScheduleSalaryValueShape
@@ -41864,6 +41901,7 @@ ceds:SalaryScheduleSalaryValueShape
   sh:path ceds:P002109 ;
   sh:name "Salary Schedule Salary Value" ;
   sh:datatype xsd:decimal ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasIncidentActivityShape
@@ -43378,3 +43416,39 @@ ceds:hasOrganizationIdentifierTypeShape
     ceds:NI200416001315    # Course Section Number
   ) ;
 .
+
+ceds:changeDateShape
+  a sh:PropertyShape ;
+  sh:path ceds:changeDate ;
+  sh:name "Change Date" ;
+  sh:datatype xsd:date ;
+.
+
+ceds:changeDescriptionShape
+  a sh:PropertyShape ;
+  sh:path ceds:changeDescription ;
+  sh:name "Change Description" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:changeVersionShape
+  a sh:PropertyShape ;
+  sh:path ceds:changeVersion ;
+  sh:name "Change Version" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:changedByShape
+  a sh:PropertyShape ;
+  sh:path ceds:changedBy ;
+  sh:name "Changed By" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:issueLinkShape
+  a sh:PropertyShape ;
+  sh:path ceds:issueLink ;
+  sh:name "Issue Link" ;
+  sh:datatype xsd:anyURI ;
+.
+
