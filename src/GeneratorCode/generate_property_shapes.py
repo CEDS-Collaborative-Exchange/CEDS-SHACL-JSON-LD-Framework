@@ -167,7 +167,7 @@ class CEDSPropertyShapesGenerator:
                 prop_id = str(prop).split('#')[-1]
                 
                 # Write the shape
-                f.write(f"ceds:{prop_data['notation']}Shape\n")
+                f.write(f"ceds:{str(prop_data['notation']).replace('(Deprecated)', '')}Shape\n")
                 f.write(f"  a sh:PropertyShape ;\n")
                 f.write(f"  sh:path ceds:{prop_id} ;\n")
                 f.write(f"  sh:name \"{prop_data['name']}\"")

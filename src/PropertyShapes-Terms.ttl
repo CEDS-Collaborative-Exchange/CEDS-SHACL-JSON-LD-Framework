@@ -313,6 +313,7 @@ ceds:hasCourseSectionAssessmentReportingMethodShape
     ceds:NI000027162383    # Workplace readiness score
     ceds:NI000027162384    # Z-score
     ceds:NI000027162385    # SAT Score
+    ceds:NI000027928168    # ACT superscore
   ) ;
 .
 
@@ -1269,7 +1270,7 @@ ceds:CredentialExpirationDateShape
   sh:datatype xsd:date ;
 .
 
-ceds:(Deprecated)CredentialIssuanceDateShape
+ceds:CredentialIssuanceDateShape
   a sh:PropertyShape ;
   sh:path ceds:P000070 ;
   sh:name "(Deprecated) Credential Issuance Date" ;
@@ -1500,6 +1501,7 @@ ceds:hasK12StaffClassificationShape
     ceds:NI000087190678    # School Administrators
     ceds:NI000087190679    # School Administrative Support Staff
     ceds:NI000087190680    # School Counselors
+    ceds:NI000087928279    # Civil Rights Coordinator
   ) ;
 .
 
@@ -1573,6 +1575,8 @@ ceds:hasEnrollmentStatusShape
     ceds:NI000094113709    # Currently enrolled
     ceds:NI000094113710    # Concurrently enrolled
     ceds:NI000094113711    # Transferring (will enroll)
+    ceds:NI000094928212    # No-Show
+    ceds:NI000094928295    # No-Show
   ) ;
 .
 
@@ -1697,12 +1701,15 @@ ceds:StaffEvaluationOutcomeShape
   sh:maxLength 80 ;
 .
 
-ceds:StaffEvaluationScaleShape
+ceds:hasStaffEvaluationScaleShape
   a sh:PropertyShape ;
   sh:path ceds:P000103 ;
-  sh:name "Staff Evaluation Scale" ;
-  sh:datatype xsd:string ;
-  sh:maxLength 80 ;
+  sh:name "Has Staff Evaluation Scale" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002176928136    # No data available
+    ceds:NI002176928137    # Not applicable
+  ) ;
 .
 
 ceds:StaffEvaluationScoreOrRatingShape
@@ -1872,7 +1879,7 @@ ceds:StaffFullTimeEquivalencyShape
   sh:path ceds:P000118 ;
   sh:name "Staff Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  sh:fractionDigits 4 ;
 .
 
 ceds:hasGEDPreparationProgramParticipationStatusShape
@@ -3733,7 +3740,7 @@ ceds:AssessmentSubtestTitleShape
   sh:path ceds:P000275 ;
   sh:name "Assessment Subtest Title" ;
   sh:datatype xsd:string ;
-  sh:maxLength 60 ;
+  sh:maxLength 300 ;
 .
 
 ceds:hasTeachingCredentialBasisShape
@@ -4706,6 +4713,8 @@ ceds:hasIndividualizedProgramTypeShape
     ceds:NI000320127912    # Other
     ceds:NI000320127913    # College and Career Ready Learning Plan
     ceds:NI000320190682    # Behavior Intervention Plan (BIP)
+    ceds:NI000320928161    # Coordinated Early Intervening Services (CEIS)
+    ceds:NI000320928162    # Comprehensive Coordinated Early Intervening Services (CCEIS)
   ) ;
 .
 
@@ -5224,6 +5233,7 @@ ceds:hasAssessmentScoreMetricTypeShape
     ceds:NI000369162383    # Workplace readiness score
     ceds:NI000369162384    # Z-score
     ceds:NI000369162385    # SAT Score
+    ceds:NI000369928167    # ACT superscore
   ) ;
 .
 
@@ -5774,108 +5784,54 @@ ceds:hasAccessibilityFeatureTypeShape
   sh:name "Has Accessibility Feature Type" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI000385118428    # Adjustable swivel arm
-    ceds:NI000385118429    # Adjustable table height
-    ceds:NI000385118430    # Braille
-    ceds:NI000385118431    # Enlarged monitor view
-    ceds:NI000385118432    # Extra time
-    ceds:NI000385118433    # Large print
-    ceds:NI000385118434    # Multi-day administration
-    ceds:NI000385118435    # Recorder or amanuensis
-    ceds:NI000385118436    # Separate room
-    ceds:NI000385118437    # Signer/sign language interpreter
-    ceds:NI000385118438    # Special furniture
-    ceds:NI000385118439    # Special lighting
-    ceds:NI000385118440    # Track ball
-    ceds:NI000385118441    # Untimed
-    ceds:NI000385118442    # Enlarged keyboard
-    ceds:NI000385118443    # Additional example items/tasks
-    ceds:NI000385118444    # Administration in several sessions
-    ceds:NI000385118445    # Answers written directly in test booklet
-    ceds:NI000385118446    # Native language
-    ceds:NI000385118447    # Arithmetic table (math or science)
-    ceds:NI000385118448    # Assistive device that does not interfere with independent work of the student
-    ceds:NI000385118449    # Assistive device that does interfere with independent work of the student
-    ceds:NI000385118450    # Audio recordings
-    ceds:NI000385118452    # Braille writer, no thesaurus, spell- or grammar-checker
-    ceds:NI000385118453    # Breaks
-    ceds:NI000385118454    # Calculator (math or science)
-    ceds:NI000385118455    # Clarify directions
-    ceds:NI000385118456    # Colored lenses
-    ceds:NI000385118457    # Computer administration
-    ceds:NI000385118458    # Cranmer abacus
-    ceds:NI000385118459    # Cueing
-    ceds:NI000385118460    # Dictionary in English
-    ceds:NI000385118461    # Dictionary in native language
-    ceds:NI000385118462    # Dictated oral response
-    ceds:NI000385118463    # Directions read aloud or explained
-    ceds:NI000385118464    # Examiner familiarity
-    ceds:NI000385118465    # Font enlarged beyond print version requirements
-    ceds:NI000385118466    # Foreign language interpreter
-    ceds:NI000385118467    # Foreign language interpreter for instructions, ask questions
-    ceds:NI000385118468    # Format
-    ceds:NI000385118469    # Hospital/home testing
-    ceds:NI000385118470    # Linguistic modification of directions
-    ceds:NI000385118471    # Magnification device
-    ceds:NI000385118472    # Manually coded English or American Sign Language to present questions
-    ceds:NI000385118473    # Math manipulatives (math or science)
-    ceds:NI000385118474    # Modification of linguistic complexity
-    ceds:NI000385118475    # Multiple test sessions
-    ceds:NI000385118476    # Oral directions in the native language
-    ceds:NI000385118477    # Paraphrasing
-    ceds:NI000385118478    # Physical supports
-    ceds:NI000385118479    # Response dictated in American Sign Language
-    ceds:NI000385118480    # Response in native language
-    ceds:NI000385118481    # Scheduled extended time
-    ceds:NI000385118482    # Separate room with other English Learners under supervision of district employee
-    ceds:NI000385118483    # Signer/sign language for instructions, ask questions
-    ceds:NI000385118484    # Simplified language
-    ceds:NI000385118485    # Small-group or individual administration
-    ceds:NI000385118486    # Speech recognition system
-    ceds:NI000385118487    # Spell-checker
-    ceds:NI000385118488    # Specialized setting
-    ceds:NI000385118489    # Student read aloud
-    ceds:NI000385118490    # Student-requested extended time
-    ceds:NI000385118491    # Supervised breaks
-    ceds:NI000385118492    # Technological aid
-    ceds:NI000385118493    # Test administrator marked / wrote test at student's direction
-    ceds:NI000385118494    # Test administrator read questions aloud
-    ceds:NI000385118495    # Test administered at best time of day for student
-    ceds:NI000385118496    # Text changes in vocabulary
-    ceds:NI000385118497    # Translation dictionary
-    ceds:NI000385118498    # Verbalized problem-solving
-    ceds:NI000385118499    # Video recordings
-    ceds:NI000385118500    # Visual cues
-    ceds:NI000385118501    # Word processor
-    ceds:NI000385118502    # Word processor - grammar-checker turned off
-    ceds:NI000385118503    # Word processor - grammar-checker enabled on essay response portion of test
-    ceds:NI000385118504    # Unknown
-    ceds:NI000385118505    # Other
-    ceds:NI000385118506    # Reverse contrast
-    ceds:NI000385118507    # Foreground/Background colors
-    ceds:NI000385118508    # Increase white space
-    ceds:NI000385118509    # Auditory calming
-    ceds:NI000385118510    # Masking
-    ceds:NI000385118511    # Answer masking
-    ceds:NI000385118512    # Structured masking
-    ceds:NI000385118513    # Encouraging prompts
-    ceds:NI000385118514    # Line reader
-    ceds:NI000385118515    # Flagging
-    ceds:NI000385118516    # Keyword highlighting
-    ceds:NI000385118517    # Scaffolding
-    ceds:NI000385118518    # Chunking
-    ceds:NI000385118519    # Reduced answer choices
-    ceds:NI000385118520    # Negatives removed
-    ceds:NI000385118521    # Alternate representation
-    ceds:NI000385118522    # Keyword translation
-    ceds:NI000385118523    # Item translation
-    ceds:NI000385118524    # Tactile
-    ceds:NI000385118525    # Sign Language Video
-    ceds:NI000385118526    # Alternate assignments or goals
-    ceds:NI000385118527    # Behavior management program
-    ceds:NI000385118528    # Check for understanding
-    ceds:NI000385118529    # Frequent feedback
-    ceds:NI000385118530    # Peer support
+    ceds:NI000385928224    # Adaptive and specialized equipment or furniture
+    ceds:NI000385928225    # Adaptive calculator
+    ceds:NI000385928226    # Alternate response option
+    ceds:NI000385928227    # Alternative text
+    ceds:NI000385928228    # Amplification
+    ceds:NI000385928229    # Auditory calming
+    ceds:NI000385928230    # Bilingual dictionary
+    ceds:NI000385928231    # Word to word bilingual dictionary
+    ceds:NI000385928232    # Word to word bilingual glossary
+    ceds:NI000385928233    # Braille
+    ceds:NI000385928234    # Breaks
+    ceds:NI000385928235    # Calculator
+    ceds:NI000385928236    # Closed captioning
+    ceds:NI000385928237    # Reference sheet
+    ceds:NI000385928238    # Assessment countdown timer
+    ceds:NI000385928239    # English dictionary
+    ceds:NI000385928240    # English glossary
+    ceds:NI000385928241    # Assessment extended time
+    ceds:NI000385928242    # Highlighter
+    ceds:NI000385928243    # Illustration glossaries
+    ceds:NI000385928244    # Large print paper assessment booklet
+    ceds:NI000385928245    # Line guide
+    ceds:NI000385928246    # Masking
+    ceds:NI000385928247    # Medical supports
+    ceds:NI000385928248    # Assessment multiple days
+    ceds:NI000385928249    # Noise canceling
+    ceds:NI000385928250    # Group size
+    ceds:NI000385928251    # Read aloud
+    ceds:NI000385928252    # Read aloud to self
+    ceds:NI000385928253    # Assessment Refocus
+    ceds:NI000385928254    # Repeat test directions
+    ceds:NI000385928255    # Screen reader
+    ceds:NI000385928256    # Setting
+    ceds:NI000385928257    # Signed administration
+    ceds:NI000385928258    # Simplified test directions
+    ceds:NI000385928259    # Specific test administrator
+    ceds:NI000385928260    # Display Format Adjustment
+    ceds:NI000385928261    # Strikethrough
+    ceds:NI000385928262    # Tactile graphics
+    ceds:NI000385928263    # Tactile symbols
+    ceds:NI000385928264    # Thesaurus
+    ceds:NI000385928265    # Assessment time of day
+    ceds:NI000385928266    # Translation
+    ceds:NI000385928267    # Bilingual glossary
+    ceds:NI000385928268    # Turn off any universal tools
+    ceds:NI000385928269    # Unlimited replays
+    ceds:NI000385928270    # Unlimited rerecording
+    ceds:NI000385928271    # Other
   ) ;
 .
 
@@ -7821,6 +7777,7 @@ ceds:hasDisciplinaryActionTakenShape
     ceds:NI000488172910    # Interim removal to alternative educational setting
     ceds:NI000488172911    # Placed in juvenile detention center
     ceds:NI000488172912    # School-related arrest
+    ceds:NI000488928170    # Transfer to Alternative School
   ) ;
 .
 
@@ -8047,6 +8004,7 @@ ceds:hasIncidentBehaviorShape
     ceds:NI000509172948    # Rape or Attempted Rape
     ceds:NI000509172949    # Stalking
     ceds:NI000509172950    # Unlawful Restraint
+    ceds:NI000509928169    # Harassment or bullying on the basis of religion
   ) ;
 .
 
@@ -8668,6 +8626,8 @@ ceds:hasSpecialEducationAgeGroupTaughtShape
   sh:in (
     ceds:NI000564114833    # 3 through 5
     ceds:NI000564115021    # 6 through 21
+    ceds:NI000564928277    # 3 through 5 (not in kindergarten)
+    ceds:NI000564928278    # 5 (in kindergarten) through 21
   ) ;
 .
 
@@ -11044,6 +11004,8 @@ ceds:hasOrganizationIdentificationSystemShape
     ceds:NI000827151975    # District-assigned number
     ceds:NI000827151976    # Federal identification number
     ceds:NI000827151980    # State University System assigned number
+    ceds:NI000827928134    # Office of Postsecondary Education Identifier
+    ceds:NI000827928135    # Institution IPEDS UnitID
   ) ;
 .
 
@@ -12764,7 +12726,6 @@ ceds:GoalDescriptionShape
   sh:path ceds:P000903 ;
   sh:name "Goal Description" ;
   sh:datatype xsd:string ;
-  sh:maxLength 300 ;
 .
 
 ceds:AssessmentItemPossibleResponseFeedbackMessageShape
@@ -12823,6 +12784,7 @@ ceds:AssessmentItemPossibleResponseValueShape
   sh:path ceds:P000908 ;
   sh:name "Assessment Item Possible Response Value" ;
   sh:datatype xsd:string ;
+  sh:maxLength 300 ;
 .
 
 ceds:CompetencyDefinitionTextComplexitySystemShape
@@ -14403,6 +14365,7 @@ ceds:AssessmentFormSectionGUIDShape
   sh:path ceds:P000980 ;
   sh:name "Assessment Form Section GUID" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:AssessmentGUIDShape
@@ -14410,6 +14373,7 @@ ceds:AssessmentGUIDShape
   sh:path ceds:P000981 ;
   sh:name "Assessment GUID" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasAccreditationAgencyShape
@@ -18812,6 +18776,7 @@ ceds:hasOrganizationTypeShape
     ceds:NI001156173080    # Affiliated Institution
     ceds:NI001156173081    # Accrediting Organization
     ceds:NI001156173082    # Region
+    ceds:NI001156928211    # Early Learning Organization
   ) ;
 .
 
@@ -25600,6 +25565,7 @@ ceds:AssessmentFormGUIDShape
   sh:path ceds:P001535 ;
   sh:name "Assessment Form GUID" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasAssessmentFormSectionItemFieldTestIndicatorShape
@@ -25646,6 +25612,7 @@ ceds:AssessmentParticipantSessionGUIDShape
   sh:path ceds:P001540 ;
   sh:name "Assessment Participant Session GUID" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasAssessmentRegistrationCompletionStatusShape
@@ -25701,10 +25668,10 @@ ceds:AssessmentResultDescriptiveFeedbackDateTimeShape
   sh:datatype xsd:dateTime ;
 .
 
-ceds:AssessmentResultScoreStandardErrorShape
+ceds:AssessmentResultScoreValueStandardErrorShape
   a sh:PropertyShape ;
   sh:path ceds:P001546 ;
-  sh:name "Assessment Result Score Standard Error" ;
+  sh:name "Assessment Result Score Value Standard Error" ;
   sh:datatype xsd:decimal ;
 .
 
@@ -26593,7 +26560,7 @@ ceds:WellChildScreeningReceivedDateShape
   sh:datatype xsd:date ;
 .
 
-ceds:(Deprecated)hasEarlyLearningEmploymentSeparationReasonShape
+ceds:hasEarlyLearningEmploymentSeparationReasonShape
   a sh:PropertyShape ;
   sh:path ceds:P001632 ;
   sh:name "(Deprecated) Has Early Learning Employment Separation Reason" ;
@@ -35373,6 +35340,7 @@ ceds:CredentialDefinitionIdentifierShape
   sh:path ceds:P001658 ;
   sh:name "Credential Definition Identifier" ;
   sh:datatype xsd:string ;
+  sh:maxLength 512 ;
 .
 
 ceds:hasIPEDSFinanceFASBFunctionalExpenseCategoryShape
@@ -38695,7 +38663,7 @@ ceds:HazardousMaterialOrConditionDescriptionShape
   sh:path ceds:P001844 ;
   sh:name "Hazardous Material or Condition Description" ;
   sh:datatype xsd:string ;
-  sh:maxLength 300 ;
+  sh:maxLength 80 ;
 .
 
 ceds:HazardousMaterialOrConditionTestingDateShape
@@ -39892,11 +39860,13 @@ ceds:hasRaceAndEthnicityShape
     ceds:NI001943162277    # American Indian or Alaska Native
     ceds:NI001943162278    # Asian
     ceds:NI001943162279    # Black or African American
-    ceds:NI001943162280    # Demographic Race Two or More Races
-    ceds:NI001943162281    # Native Hawaiian or Other Pacific Islander
+    ceds:NI001943162280    # (Deprecated) Demographic Race Two or More Races
+    ceds:NI001943162281    # Native Hawaiian or Pacific Islander
     ceds:NI001943162282    # Race and Ethnicity Unknown
     ceds:NI001943162283    # White
-    ceds:NI001943162284    # Hispanic or Latino Ethnicity
+    ceds:NI001943162284    # Hispanic or Latino
+    ceds:NI001943928202    # Multiracial and/or Multiethnic
+    ceds:NI001943928204    # Middle Eastern or North African
   ) ;
 .
 
@@ -40294,6 +40264,7 @@ ceds:StaffEvaluationPartNameShape
   sh:path ceds:P001985 ;
   sh:name "Staff Evaluation Part Name" ;
   sh:datatype xsd:string ;
+  sh:maxLength 60 ;
 .
 
 ceds:StaffEvaluationPartScoreOrRatingShape
@@ -40301,6 +40272,7 @@ ceds:StaffEvaluationPartScoreOrRatingShape
   sh:path ceds:P001986 ;
   sh:name "Staff Evaluation Part Score or Rating" ;
   sh:datatype xsd:string ;
+  sh:maxLength 60 ;
 .
 
 ceds:StaffEvaluationPartScaleShape
@@ -40776,6 +40748,7 @@ ceds:LearningResourceIdentifierShape
   sh:path ceds:P002027 ;
   sh:name "Learning Resource Identifier" ;
   sh:datatype xsd:string ;
+  sh:maxLength 40 ;
 .
 
 ceds:hasLearningResourceIdentificationSystemShape
@@ -40839,7 +40812,6 @@ ceds:LearningResourceStatusQuantityShape
   sh:path ceds:P002033 ;
   sh:name "Learning Resource Status Quantity" ;
   sh:datatype xsd:int ;
-  sh:minLength 0 ;
 .
 
 ceds:hasMilitaryCountryShape
@@ -41353,6 +41325,7 @@ ceds:YearsOfPriorProfessionalExperienceShape
   sh:path ceds:P002061 ;
   sh:name "Years of Prior Professional Experience" ;
   sh:datatype xsd:int ;
+  sh:fractionDigits 2 ;
 .
 
 ceds:hasTeenParentIndicatorShape
@@ -41559,10 +41532,10 @@ ceds:hasJobPositionStatusCancelledReasonShape
   ) ;
 .
 
-ceds:hasCredentialAwardRelationshipShape
+ceds:hasCredentialAwardRelationshipTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P002081 ;
-  sh:name "Has Credential Award Relationship" ;
+  sh:name "Has Credential Award Relationship Type" ;
   sh:nodeKind sh:IRI ;
   sh:in (
     ceds:NI002081181503    # Extension
@@ -41936,6 +41909,7 @@ ceds:FacilityJointUseDescriptionShape
   sh:path ceds:P002112 ;
   sh:name "Facility Joint Use Description" ;
   sh:datatype xsd:string ;
+  sh:maxLength 300 ;
 .
 
 ceds:hasDropoutReasonTypeShape
@@ -42361,6 +42335,7 @@ ceds:hasBrailleAccessTypeShape
     ceds:NI002146190535    # Braille notetaker
     ceds:NI002146190536    # Braille writer
     ceds:NI002146190537    # Refreshable Braille
+    ceds:NI002146928205    # Embossed braille
   ) ;
 .
 
@@ -42382,8 +42357,9 @@ ceds:hasBrailleCodeTypeShape
   sh:name "Has Braille Code Type" ;
   sh:nodeKind sh:IRI ;
   sh:in (
-    ceds:NI002148190541    # Nemeth
+    ceds:NI002148190541    # UEB with Nemeth
     ceds:NI002148190542    # Unified English Braille (UEB)
+    ceds:NI002148928206    # UEB Math/Science
   ) ;
 .
 
@@ -42576,6 +42552,8 @@ ceds:hasTactileMediumTypeShape
   sh:in (
     ceds:NI002165190665    # Paper
     ceds:NI002165190666    # Thermoform
+    ceds:NI002165928207    # Actual object
+    ceds:NI002165928208    # Manipulative
   ) ;
 .
 
@@ -43175,6 +43153,334 @@ ceds:hasAssessmentComponentTypeShape
   ) ;
 .
 
+ceds:hasCanadianProvinceAbbreviationShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002177 ;
+  sh:name "Has Canadian Province Abbreviation" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002177928138    # Alberta
+    ceds:NI002177928139    # British Columbia
+    ceds:NI002177928140    # Manitoba
+    ceds:NI002177928141    # New Brunswick
+    ceds:NI002177928142    # Newfoundland and Labrador
+    ceds:NI002177928143    # Northwest Territories
+    ceds:NI002177928144    # Nova Scotia
+    ceds:NI002177928145    # Nunavut
+    ceds:NI002177928146    # Ontario
+    ceds:NI002177928147    # Prince Edward Island
+    ceds:NI002177928148    # Quebec
+    ceds:NI002177928149    # Saskatchewan
+    ceds:NI002177928150    # Yukon
+  ) ;
+.
+
+ceds:hasEnglishLearnerExitedStatusShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002178 ;
+  sh:name "Has English Learner Exited Status" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002178928165    # Yes
+    ceds:NI002178928166    # No
+  ) ;
+.
+
+ceds:hasEdFactsCohortGraduationStatusShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002179 ;
+  sh:name "Has EDFacts Cohort Graduation Status" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002179928154    # Graduated with a regular high school diploma within the allowable time
+    ceds:NI002179928155    # Graduated with a State-defined alternate high school diploma within the allowable time
+    ceds:NI002179928156    # Did not graduate with a regular or State-defined alternate high school diploma within the allowable time
+    ceds:NI002179928157    # Has not graduated with a state-defined alternate high school diploma and removed from the cohort as allowed
+  ) ;
+.
+
+ceds:hasNeglectedOrDelinquentLongTermStatusShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002180 ;
+  sh:name "Has Neglected or Delinquent Long Term Status" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002180928158    # Long-Term Neglected or Delinquent Student
+  ) ;
+.
+
+ceds:hasNeglectedOrDelinquentProgramEnrollmentSubpartShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002181 ;
+  sh:name "Has Neglected or Delinquent Program Enrollment Subpart" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002181928159    # State Agency
+    ceds:NI002181928160    # Local Agency
+  ) ;
+.
+
+ceds:hasComprehensiveSupportAndImprovementIdentificationTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002182 ;
+  sh:name "Has Comprehensive Support and Improvement Identification Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002182928130    # Lowest-performing school
+    ceds:NI002182928131    # Low graduation rate high school
+    ceds:NI002182928132    # ATSI school becoming CSI because not exiting ATSI status
+    ceds:NI002182928133    # More rigorous interventions because CSI school not exiting such status
+  ) ;
+.
+
+ceds:hasMagnetOrSpecialProgramEmphasisTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002183 ;
+  sh:name "Has Magnet or Special Program Emphasis Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002183928171    # No Racial Isolation
+    ceds:NI002183928172    # Academic or Social Focus
+    ceds:NI002183928173    # Both
+  ) ;
+.
+
+ceds:hasServiceChargeIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002184 ;
+  sh:name "Has Service Charge Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002184928174    # No Charge
+    ceds:NI002184928175    # Partial Charge
+    ceds:NI002184928176    # Full Charge
+  ) ;
+.
+
+ceds:hasPreschoolDailyLengthShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002185 ;
+  sh:name "Has Preschool Daily Length" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002185928177    # Full-day
+    ceds:NI002185928178    # Part-day
+    ceds:NI002185928179    # Not provided
+  ) ;
+.
+
+ceds:hasWiFiEnabledDeviceNeedIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002186 ;
+  sh:name "Has Wi-Fi Enabled Device Need Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002186928180    # Needed
+    ceds:NI002186928181    # Not Needed
+    ceds:NI002186928182    # Unknown
+  ) ;
+.
+
+ceds:hasWiFiEnabledDeviceReceivedIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002187 ;
+  sh:name "Has Wi-Fi Enabled Device Received Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002187928183    # Received
+    ceds:NI002187928184    # Not Received
+    ceds:NI002187928185    # Unknown
+  ) ;
+.
+
+ceds:hasShootingIncidentIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002188 ;
+  sh:name "Has Shooting Incident Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002188928186    # Yes
+    ceds:NI002188928187    # No
+  ) ;
+.
+
+ceds:hasIncidentResponsibilityStaffIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002189 ;
+  sh:name "Has Incident Responsibility Staff Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002189928188    # Yes
+    ceds:NI002189928189    # No
+  ) ;
+.
+
+ceds:hasHotspotNeedIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002190 ;
+  sh:name "Has Hotspot Need Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002190928190    # Needed
+    ceds:NI002190928191    # Not Needed
+    ceds:NI002190928192    # Unknown
+  ) ;
+.
+
+ceds:hasHotspotReceivedIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002191 ;
+  sh:name "Has Hotspot Received Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002191928193    # Received
+    ceds:NI002191928194    # Not Received
+    ceds:NI002191928195    # Unknown
+  ) ;
+.
+
+ceds:hasCRDCJusticeFacilityTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002192 ;
+  sh:name "Has CRDC Justice Facility Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002192928196    # Pre-adjudication facility
+    ceds:NI002192928197    # Post-adjudication facility
+    ceds:NI002192928198    # Pre-conviction facility
+    ceds:NI002192928199    # Post-conviction facility
+  ) ;
+.
+
+ceds:hasJusticeFacilityIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002193 ;
+  sh:name "Has Justice Facility Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002193928200    # Yes
+    ceds:NI002193928201    # No
+  ) ;
+.
+
+ceds:hasEvaluationRequiredIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002194 ;
+  sh:name "Has Evaluation Required Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002194928209    # Evaluation required
+    ceds:NI002194928210    # Evaluation not required
+  ) ;
+.
+
+ceds:hasCredentialAwardStatusTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002196 ;
+  sh:name "Has Credential Award Status Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002196928213    # Valid
+    ceds:NI002196928214    # Expired
+    ceds:NI002196928215    # Lapsed due to Inactivity
+    ceds:NI002196928216    # Nullified
+    ceds:NI002196928217    # Revoked
+    ceds:NI002196928218    # Suspended
+    ceds:NI002196928219    # Withdrawn
+  ) ;
+.
+
+ceds:CredentialAwardStatusDateShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002197 ;
+  sh:name "Credential Award Status Date" ;
+  sh:datatype xsd:date ;
+.
+
+ceds:CredentialAwardIdentifierShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002198 ;
+  sh:name "Credential Award Identifier" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:hasCredentialAwardIdentificationSystemShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002199 ;
+  sh:name "Has Credential Award Identification System" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002199928272    # School-assigned number
+    ceds:NI002199928273    # District-assigned number
+    ceds:NI002199928274    # State-assigned number
+    ceds:NI002199928275    # Federal identification number
+    ceds:NI002199928276    # Other
+  ) ;
+.
+
+ceds:InterscholasticSportsShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002200 ;
+  sh:name "Interscholastic Sports" ;
+  sh:datatype xsd:integer ;
+.
+
+ceds:InterscholasticTeamsShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002201 ;
+  sh:name "Interscholastic Teams" ;
+  sh:datatype xsd:integer ;
+.
+
+ceds:hasHarassmentOrBullyingReligionTypeShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002202 ;
+  sh:name "Has Harassment or Bullying Religion Type" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002202928280    # Agnostic
+    ceds:NI002202928281    # Atheist
+    ceds:NI002202928282    # Buddhist
+    ceds:NI002202928283    # Catholic
+    ceds:NI002202928284    # Eastern Orthodox (Russian, Greek, Other)
+    ceds:NI002202928285    # Hindu
+    ceds:NI002202928286    # Islamic (Muslim)
+    ceds:NI002202928287    # Jehovah's Witness
+    ceds:NI002202928288    # Jewish (Judaism)
+    ceds:NI002202928289    # Mormon (Latter-day Saint)
+    ceds:NI002202928290    # Multiple Religions, Group
+    ceds:NI002202928291    # Other Christian
+    ceds:NI002202928292    # Other Religions
+    ceds:NI002202928293    # Protestant
+    ceds:NI002202928294    # Sikh
+  ) ;
+.
+
+ceds:hasTitleIIILanguageInstructionIndicatorShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002203 ;
+  sh:name "Has Title III Language Instruction Indicator" ;
+  sh:nodeKind sh:IRI ;
+  sh:in (
+    ceds:NI002203928163    # Yes
+    ceds:NI002203928164    # No
+  ) ;
+.
+
+ceds:ProfessionalDevelopmentActivityApprovalStartDateShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002204 ;
+  sh:name "Professional Development Activity Approval Start Date" ;
+  sh:datatype xsd:date ;
+.
+
+ceds:ProfessionalDevelopmentActivityApprovalEndDateShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002205 ;
+  sh:name "Professional Development Activity Approval End Date" ;
+  sh:datatype xsd:date ;
+.
+
 ceds:hasAddressTypeForOrganizationShape
   a sh:PropertyShape ;
   sh:path ceds:P201004 ;
@@ -43408,11 +43714,11 @@ ceds:hasOrganizationIdentifierTypeShape
     ceds:NI200416000175    # Local Education Agency Supervisory Union Identification Number
     ceds:NI200416000203    # Office of Postsecondary Education Identifier
     ceds:NI200416000625    # Program Identifier
-    ceds:NI200416000781    # Adult Education Service Provider Identification System
-    ceds:NI200416000827    # Organization Identification System
+    ceds:NI200416000781    # Adult Education Service Provider Identifier
+    ceds:NI200416000827    # Organization Identifier
     ceds:NI200416000978    # Course Section Identifier
-    ceds:NI200416001072    # Local Education Agency Identification System
-    ceds:NI200416001073    # School Identification System
+    ceds:NI200416001072    # Local Education Agency Identifier
+    ceds:NI200416001073    # School Identifier
     ceds:NI200416001315    # Course Section Number
   ) ;
 .
@@ -43429,6 +43735,20 @@ ceds:changeDescriptionShape
   sh:path ceds:changeDescription ;
   sh:name "Change Description" ;
   sh:datatype xsd:string ;
+.
+
+ceds:changedNewShape
+  a sh:PropertyShape ;
+  sh:path ceds:changeNew ;
+  sh:name "Change New" ;
+  sh:datatype xsd:boolean ;
+.
+
+ceds:changedUpdatedShape
+  a sh:PropertyShape ;
+  sh:path ceds:changeUpdated ;
+  sh:name "Change Updated" ;
+  sh:datatype xsd:boolean ;
 .
 
 ceds:changeVersionShape
@@ -43449,6 +43769,20 @@ ceds:issueLinkShape
   a sh:PropertyShape ;
   sh:path ceds:issueLink ;
   sh:name "Issue Link" ;
+  sh:datatype xsd:anyURI ;
+.
+
+ceds:usageNotesShape
+  a sh:PropertyShape ;
+  sh:path ceds:usageNotes ;
+  sh:name "Usage Notes" ;
+  sh:datatype xsd:string ;
+.
+
+ceds:usageURLShape
+  a sh:PropertyShape ;
+  sh:path ceds:usageURL ;
+  sh:name "Usage URL" ;
   sh:datatype xsd:anyURI ;
 .
 
