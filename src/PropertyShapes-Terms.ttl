@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceds: <https://w3id.org/CEDStandards/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
 ceds:AcademicAwardDateShape
@@ -9020,6 +9020,7 @@ ceds:hasCalendarEventTypeShape
     ceds:NI000603172965    # Strike
     ceds:NI000603172966    # Teacher only day
     ceds:NI000603172967    # Instructional day
+    ceds:NI000603928296    # Professional development day
   ) ;
 .
 
@@ -37434,7 +37435,7 @@ ceds:hasCTDLOrganizationTypeShape
   ) ;
 .
 
-ceds:hasO*NET-SOCOccupationTypeShape
+ceds:hasO_NET-SOCOccupationTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P001756 ;
   sh:name "Has O*NET-SOC Occupation Type" ;
@@ -39856,6 +39857,7 @@ ceds:hasRaceAndEthnicityShape
   sh:path ceds:P001943 ;
   sh:name "Has Race And Ethnicity" ;
   sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
   sh:in (
     ceds:NI001943162277    # American Indian or Alaska Native
     ceds:NI001943162278    # Asian
@@ -39868,7 +39870,39 @@ ceds:hasRaceAndEthnicityShape
     ceds:NI001943928202    # Multiracial and/or Multiethnic
     ceds:NI001943928204    # Middle Eastern or North African
   ) ;
-.
+  sh:xone (
+    [
+      # Exclusive single-select values — cannot be combined with specific races.
+      # "Unknown" and deprecated "Two or More Races" mean the reporter cannot
+      # also assert specific races; "Multiracial/Multiethnic" is a roll-up that
+      # supersedes listing individual races in V14.
+      a sh:PropertyShape ;
+      sh:path ceds:P001943 ;
+      sh:nodeKind sh:IRI ;
+      sh:maxCount 1 ;
+      sh:in (
+        ceds:NI001943162282    # Race and Ethnicity Unknown
+        ceds:NI001943162280    # (Deprecated) Demographic Race Two or More Races
+        ceds:NI001943928202    # Multiracial and/or Multiethnic
+      )
+    ]
+    [
+      # Specific race/ethnicity values — may be combined with each other.
+      a sh:PropertyShape ;
+      sh:path ceds:P001943 ;
+      sh:nodeKind sh:IRI ;
+      sh:in (
+        ceds:NI001943162277    # American Indian or Alaska Native
+        ceds:NI001943162278    # Asian
+        ceds:NI001943162279    # Black or African American
+        ceds:NI001943162281    # Native Hawaiian or Pacific Islander
+        ceds:NI001943162283    # White
+        ceds:NI001943162284    # Hispanic or Latino
+        ceds:NI001943928204    # Middle Eastern or North African
+      ) ;
+      sh:minCount 1
+    ]
+  ) .
 
 ceds:hasFederalRaceAndEthnicityDeclinedShape
   a sh:PropertyShape ;
@@ -39913,7 +39947,7 @@ ceds:NCESSIDEEstimateShape
   sh:datatype xsd:decimal ;
 .
 
-ceds:NCESSIDEStandard ErrorShape
+ceds:NCESSIDEStandardErrorShape
   a sh:PropertyShape ;
   sh:path ceds:P001949 ;
   sh:name "NCES SIDE Standard Error" ;
@@ -41077,6 +41111,7 @@ ceds:MilitaryOccupationalSpecialtiesShape
   sh:path ceds:P002035 ;
   sh:name "Military Occupational Specialties" ;
   sh:datatype xsd:string ;
+  sh:maxLength 200 ;
 .
 
 ceds:hasMilitaryExpertiseShape
@@ -42203,7 +42238,7 @@ ceds:IndirectCostRateAgreementStartDateShape
   sh:datatype xsd:date ;
 .
 
-ceds: IndirectCostRateAgreementEndDateShape
+ceds:IndirectCostRateAgreementEndDateShape
   a sh:PropertyShape ;
   sh:path ceds:P002135 ;
   sh:name "Indirect Cost Rate Agreement End Date" ;
@@ -43481,6 +43516,13 @@ ceds:ProfessionalDevelopmentActivityApprovalEndDateShape
   sh:datatype xsd:date ;
 .
 
+ceds:DeathDateShape
+  a sh:PropertyShape ;
+  sh:path ceds:P002206 ;
+  sh:name "Death Date" ;
+  sh:datatype xsd:date ;
+.
+
 ceds:hasAddressTypeForOrganizationShape
   a sh:PropertyShape ;
   sh:path ceds:P201004 ;
@@ -43737,14 +43779,21 @@ ceds:changeDescriptionShape
   sh:datatype xsd:string ;
 .
 
-ceds:changedNewShape
+ceds:changeNewShape
   a sh:PropertyShape ;
   sh:path ceds:changeNew ;
   sh:name "Change New" ;
   sh:datatype xsd:boolean ;
 .
 
-ceds:changedUpdatedShape
+ceds:changePropertyAddedToClassShape
+  a sh:PropertyShape ;
+  sh:path ceds:changePropertyAddedToClass ;
+  sh:name "Change Property Added To Class" ;
+  sh:datatype xsd:boolean ;
+.
+
+ceds:changeUpdatedShape
   a sh:PropertyShape ;
   sh:path ceds:changeUpdated ;
   sh:name "Change Updated" ;
