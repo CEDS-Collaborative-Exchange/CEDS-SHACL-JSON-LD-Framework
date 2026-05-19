@@ -16,7 +16,7 @@ from collections import defaultdict, OrderedDict
 from pathlib import Path
 
 # Define namespaces
-CEDS = Namespace("http://ceds.ed.gov/terms#")
+CEDS = Namespace("https://w3id.org/CEDStandards/terms/")
 SCHEMA = Namespace("https://schema.org/")
 SH = Namespace("http://www.w3.org/ns/shacl#")
 
@@ -123,21 +123,35 @@ class CEDSPropertyShapesGenerator:
         print(f"Processed {len(self.data_properties)} data properties")
     
     
+    def _local_name(self, uri):
+        """Extract local name from a URI, handling both # and / separators."""
+        s = str(uri)
+        if '#' in s:
+            return s.split('#')[-1]
+        return s.rstrip('/').split('/')[-1]
+
+    def _shape_name(self, notation):
+        """Convert a SKOS notation to a valid Turtle local name for a shape."""
+        cleaned = str(notation).replace('(Deprecated)', '').strip()
+        # Replace characters invalid in Turtle prefixed names with underscores
+        cleaned = re.sub(r'[^A-Za-z0-9_.\-]', '_', cleaned)
+        return cleaned
+
     def _get_property_name(self, prop):
         """Extract readable name for property"""
         # Try schema:name first
         name = self._get_annotation(prop, SCHEMA.name)
         if name:
             return name
-        
+
         # Try rdfs:label
         name = self._get_annotation(prop, RDFS.label)
         if name:
             return name
-        
-        # Fallback to URI fragment
-        return str(prop).split('#')[-1]
-    
+
+        # Fallback to URI local name
+        return self._local_name(prop)
+
     def _get_annotation(self, subject, predicate):
         """Get annotation value as string"""
         value = self.ontology_graph.value(subject, predicate)
@@ -157,17 +171,17 @@ class CEDSPropertyShapesGenerator:
         
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write("@prefix sh: <http://www.w3.org/ns/shacl#> .\n")
-            f.write("@prefix ceds: <http://ceds.ed.gov/terms#> .\n")
+            f.write("@prefix ceds: <https://w3id.org/CEDStandards/terms/> .\n")
             f.write("@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . \n\n")
             
             # Sort properties by ID for consistent output
             sorted_props = sorted(self.data_properties.items(), key=lambda x: str(x[0]))
             
             for prop, prop_data in sorted_props:
-                prop_id = str(prop).split('#')[-1]
-                
+                prop_id = self._local_name(prop)
+
                 # Write the shape
-                f.write(f"ceds:{str(prop_data['notation']).replace('(Deprecated)', '')}Shape\n")
+                f.write(f"ceds:{self._shape_name(prop_data['notation'])}Shape\n")
                 f.write(f"  a sh:PropertyShape ;\n")
                 f.write(f"  sh:path ceds:{prop_id} ;\n")
                 f.write(f"  sh:name \"{prop_data['name']}\"")
@@ -182,14 +196,14 @@ class CEDSPropertyShapesGenerator:
                         if individuals:
                             f.write(f"  sh:in (\n")
                             for individual in individuals:
-                                individual_id = str(individual['uri']).split('#')[-1]
+                                individual_id = self._local_name(individual['uri'])
                                 comment = f"    # {individual['label']}" if individual['label'] != individual_id else ""
                                 f.write(f"    ceds:{individual_id}{comment}\n")
                             f.write(f"  )")
                 
                 # Handle basic datatype properties
                 elif prop_data['datatype']:
-                    datatype_name = str(prop_data['datatype']).split('#')[-1]
+                    datatype_name = self._local_name(prop_data['datatype'])
                     f.write(" ;\n")
                     f.write(f"  sh:datatype xsd:{datatype_name}")
                     
