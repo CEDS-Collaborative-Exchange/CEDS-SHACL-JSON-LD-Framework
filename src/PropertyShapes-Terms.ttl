@@ -368,7 +368,7 @@ ceds:AvailableCarnegieUnitCreditShape
   sh:path ceds:P000030 ;
   sh:name "Available Carnegie Unit Credit" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasAwaitingInitialIDEAEvaluationStatusShape
@@ -387,7 +387,7 @@ ceds:StaffCompensationBaseSalaryShape
   sh:path ceds:P000032 ;
   sh:name "Staff Compensation Base Salary" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BirthdateShape
@@ -548,7 +548,7 @@ ceds:ContractDaysOfServicePerYearShape
   sh:path ceds:P000047 ;
   sh:name "Contract Days of Service Per Year" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasControlOfInstitutionShape
@@ -1158,7 +1158,7 @@ ceds:CreditValueShape
   sh:path ceds:P000058 ;
   sh:name "Credit Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:CourseEndDateShape
@@ -1221,7 +1221,7 @@ ceds:CourseQualityPointsEarnedShape
   sh:path ceds:P000064 ;
   sh:name "Course Quality Points Earned" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasCourseRepeatCodeShape
@@ -1328,7 +1328,7 @@ ceds:CreditsAttemptedCumulativeShape
   sh:path ceds:P000073 ;
   sh:name "Credits Attempted Cumulative" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:CreditsEarnedCumulativeShape
@@ -1336,7 +1336,7 @@ ceds:CreditsEarnedCumulativeShape
   sh:path ceds:P000074 ;
   sh:name "Credits Earned Cumulative" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasCTEGraduationRateInclusionShape
@@ -1446,7 +1446,7 @@ ceds:DualCreditDualEnrollmentCreditsAwardedShape
   sh:path ceds:P000085 ;
   sh:name "Dual Credit Dual Enrollment Credits Awarded" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasEconomicDisadvantageStatusShape
@@ -1821,7 +1821,7 @@ ceds:FinancialAidAwardAmountShape
   sh:path ceds:P000112 ;
   sh:name "Financial Aid Award Amount" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasFinancialAidAwardTypeShape
@@ -1879,7 +1879,7 @@ ceds:StaffFullTimeEquivalencyShape
   sh:path ceds:P000118 ;
   sh:name "Staff Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:hasGEDPreparationProgramParticipationStatusShape
@@ -2003,7 +2003,7 @@ ceds:GradePointAverageShape
   sh:path ceds:P000127 ;
   sh:name "Grade Point Average" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:GPACumulativeShape
@@ -2011,7 +2011,7 @@ ceds:GPACumulativeShape
   sh:path ceds:P000128 ;
   sh:name "Grade Point Average Cumulative" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:GPAGivenSessionShape
@@ -2019,7 +2019,7 @@ ceds:GPAGivenSessionShape
   sh:path ceds:P000129 ;
   sh:name "Grade Point Average Given Session" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:GradePointsEarnedCumulativeShape
@@ -2027,7 +2027,7 @@ ceds:GradePointsEarnedCumulativeShape
   sh:path ceds:P000130 ;
   sh:name "Grade Points Earned Cumulative" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:HasGradesOfferedShape
@@ -2110,7 +2110,7 @@ ceds:StaffCompensationHealthBenefitsShape
   sh:path ceds:P000136 ;
   sh:name "Staff Compensation Health Benefits" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasHighSchoolCourseRequirementShape
@@ -2350,7 +2350,7 @@ ceds:InstructionalActivityHoursAttemptedShape
   sh:path ceds:P000168 ;
   sh:name "Instructional Activity Hours Attempted" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasInstructionalActivityHoursTypeShape
@@ -2675,7 +2675,7 @@ ceds:NumberOfCreditsAttemptedShape
   sh:path ceds:P000199 ;
   sh:name "Number of Credits Attempted" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:NumberOfCreditsEarnedShape
@@ -2683,7 +2683,7 @@ ceds:NumberOfCreditsEarnedShape
   sh:path ceds:P000200 ;
   sh:name "Number of Credits Earned" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:NumberOfDaysAbsentShape
@@ -2691,7 +2691,7 @@ ceds:NumberOfDaysAbsentShape
   sh:path ceds:P000201 ;
   sh:name "Number of Days Absent" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:NumberOfDaysInAttendanceShape
@@ -2699,7 +2699,7 @@ ceds:NumberOfDaysInAttendanceShape
   sh:path ceds:P000202 ;
   sh:name "Number of Days in Attendance" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:OrganizationNameShape
@@ -2715,7 +2715,7 @@ ceds:StaffCompensationOtherBenefitsShape
   sh:path ceds:P000205 ;
   sh:name "Staff Compensation Other Benefits" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:OtherNameShape
@@ -2955,7 +2955,7 @@ ceds:ProgramLengthHoursShape
   sh:path ceds:P000223 ;
   sh:name "Program Length Hours" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasProgramLengthHoursTypeShape
@@ -3135,7 +3135,7 @@ ceds:StaffCompensationRetirementBenefitsShape
   sh:path ceds:P000233 ;
   sh:name "Staff Compensation Retirement Benefits" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasSalaryForTeachingAssignmentOnlyIndicatorShape
@@ -3626,7 +3626,7 @@ ceds:StudentAttendanceRateShape
   sh:path ceds:P000271 ;
   sh:name "Student Attendance Rate" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 6 ;
+  ceds:fractionDigits 6 ;
 .
 
 ceds:hasStudentLevelShape
@@ -3963,7 +3963,7 @@ ceds:StaffCompensationTotalBenefitsShape
   sh:path ceds:P000293 ;
   sh:name "Staff Compensation Total Benefits" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:TotalNumberInClassShape
@@ -3978,7 +3978,7 @@ ceds:StaffCompensationTotalSalaryShape
   sh:path ceds:P000295 ;
   sh:name "Staff Compensation Total Salary" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTransferReadyShape
@@ -4024,7 +4024,7 @@ ceds:YearsOfPriorTeachingExperienceShape
   sh:path ceds:P000302 ;
   sh:name "Years of Prior Teaching Experience" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasEarlyLearningProgramEligibilityCategoryShape
@@ -4841,7 +4841,7 @@ ceds:FamilyIncomeShape
   sh:path ceds:P000332 ;
   sh:name "Family Income" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasSourceOfFamilyIncomeShape
@@ -5059,7 +5059,7 @@ ceds:HoursAvailablePerDayShape
   sh:path ceds:P000354 ;
   sh:name "Hours Available Per Day" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:DaysAvailablePerWeekShape
@@ -5132,7 +5132,7 @@ ceds:InstructionalActivityHoursCompletedShape
   sh:path ceds:P000362 ;
   sh:name "Instructional Activity Hours Completed" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasFinancialAidAwardStatusShape
@@ -5930,7 +5930,7 @@ ceds:AssessmentItemDifficultyShape
   sh:path ceds:P000391 ;
   sh:name "Assessment Item Difficulty" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasAssessmentItemCharacteristicTypeShape
@@ -7430,7 +7430,7 @@ ceds:FundsTransferAmountShape
   sh:path ceds:P000452 ;
   sh:name "Funds Transfer Amount" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:StateAssessmentStandardsFundingShape
@@ -7438,7 +7438,7 @@ ceds:StateAssessmentStandardsFundingShape
   sh:path ceds:P000453 ;
   sh:name "State Assessment Standards Funding" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:StateAssessmentAdministrationFundingShape
@@ -7446,7 +7446,7 @@ ceds:StateAssessmentAdministrationFundingShape
   sh:path ceds:P000454 ;
   sh:name "State Assessment Administration Funding" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:DateStateReceivedTitleIIIAllocationShape
@@ -7468,7 +7468,7 @@ ceds:NumberOfDaysForTitleIIISubgrantsShape
   sh:path ceds:P000457 ;
   sh:name "Number of Days for Title III Subgrants" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:InnovativeDollarsSpentShape
@@ -7476,7 +7476,7 @@ ceds:InnovativeDollarsSpentShape
   sh:path ceds:P000461 ;
   sh:name "Innovative Dollars Spent" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:InnovativeDollarsSpentOnStrategicPrioritiesShape
@@ -7484,7 +7484,7 @@ ceds:InnovativeDollarsSpentOnStrategicPrioritiesShape
   sh:path ceds:P000462 ;
   sh:name "Innovative Dollars Spent on Strategic Priorities" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasMigrantEducationProgramProjectTypeShape
@@ -7505,7 +7505,7 @@ ceds:InnovativeProgramsFundsReceivedShape
   sh:path ceds:P000464 ;
   sh:name "Innovative Programs Funds Received" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasLiteracyAssessmentAdministeredTypeShape
@@ -7640,7 +7640,7 @@ ceds:SchoolImprovementReservedFundsPercentageShape
   sh:path ceds:P000479 ;
   sh:name "School Improvement Reserved Funds Percentage" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:SchoolImprovementAllocationShape
@@ -7648,7 +7648,7 @@ ceds:SchoolImprovementAllocationShape
   sh:path ceds:P000480 ;
   sh:name "School Improvement Allocation" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:SchoolImprovementExitDateShape
@@ -8027,7 +8027,7 @@ ceds:DurationOfDisciplinaryActionShape
   sh:path ceds:P000511 ;
   sh:name "Duration of Disciplinary Action" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasRelatedToZeroTolerancePolicyShape
@@ -8437,7 +8437,7 @@ ceds:FederalProgramsFundingAllocationShape
   sh:path ceds:P000549 ;
   sh:name "Federal Programs Funding Allocation" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTitleISchoolwideProgramParticipationShape
@@ -8658,7 +8658,7 @@ ceds:SESFundsSpentShape
   sh:path ceds:P000567 ;
   sh:name "Supplemental Educational Services Funds Spent" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:PublicSchoolChoiceFundsSpentShape
@@ -8666,7 +8666,7 @@ ceds:PublicSchoolChoiceFundsSpentShape
   sh:path ceds:P000568 ;
   sh:name "Public School Choice Funds Spent" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTruantStatusShape
@@ -8719,7 +8719,7 @@ ceds:SESPublicSchoolChoiceTwentyPercentObligationShape
   sh:path ceds:P000574 ;
   sh:name "Supplemental Education Services Public School Choice Twenty Percent Obligation" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:SESPerPupilExpenditureShape
@@ -8727,7 +8727,7 @@ ceds:SESPerPupilExpenditureShape
   sh:path ceds:P000575 ;
   sh:name "Supplemental Educational Services Per Pupil Expenditure" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasDisabilityStatusShape
@@ -9454,7 +9454,7 @@ ceds:TeachingAssignmentContributionPercentageShape
   sh:path ceds:P000649 ;
   sh:name "Teaching Assignment Contribution Percentage" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasCourseSectionEntryTypeShape
@@ -10137,7 +10137,7 @@ ceds:TuitionPublishedShape
   sh:path ceds:P000745 ;
   sh:name "Tuition - Published" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTuitionUnitShape
@@ -10159,7 +10159,7 @@ ceds:RequiredStudentFeesShape
   sh:path ceds:P000747 ;
   sh:name "Required Student Fees" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasInstitutionallyControlledHousingStatusShape
@@ -10178,7 +10178,7 @@ ceds:RoomChargesShape
   sh:path ceds:P000749 ;
   sh:name "Room Charges" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BoardChargesShape
@@ -10186,7 +10186,7 @@ ceds:BoardChargesShape
   sh:path ceds:P000750 ;
   sh:name "Board Charges" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BooksAndSuppliesCostsShape
@@ -10194,7 +10194,7 @@ ceds:BooksAndSuppliesCostsShape
   sh:path ceds:P000751 ;
   sh:name "Books and Supplies Costs" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:OtherStudentExpensesShape
@@ -10202,7 +10202,7 @@ ceds:OtherStudentExpensesShape
   sh:path ceds:P000752 ;
   sh:name "Other Student Expenses" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:PriceOfAttendanceShape
@@ -10210,7 +10210,7 @@ ceds:PriceOfAttendanceShape
   sh:path ceds:P000753 ;
   sh:name "Price of Attendance" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:ComprehensiveFeeShape
@@ -10218,7 +10218,7 @@ ceds:ComprehensiveFeeShape
   sh:path ceds:P000754 ;
   sh:name "Comprehensive Fee" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasPostsecondaryApplicantShape
@@ -10278,7 +10278,7 @@ ceds:HighSchoolPercentileShape
   sh:path ceds:P000759 ;
   sh:name "High School Percentile" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasPostsecondaryStudentHousingOnCampusShape
@@ -10330,7 +10330,7 @@ ceds:FinancialNeedShape
   sh:path ceds:P000765 ;
   sh:name "Financial Need" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTeacherEducationTestCompanyShape
@@ -10599,7 +10599,7 @@ ceds:YearsofPriorAETeachingExperienceShape
   sh:path ceds:P000788 ;
   sh:name "Years of Prior Adult Education Teaching Experience" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasEarlyChildhoodDegreeOrCertificateHolderShape
@@ -10618,7 +10618,7 @@ ceds:ProxyContactHoursShape
   sh:path ceds:P000790 ;
   sh:name "Proxy Contact Hours" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 1 ;
+  ceds:fractionDigits 1 ;
 .
 
 ceds:EarlyLearningStaffTotalCollegeCreditsEarnedShape
@@ -10626,7 +10626,7 @@ ceds:EarlyLearningStaffTotalCollegeCreditsEarnedShape
   sh:path ceds:P000792 ;
   sh:name "Early Learning Staff Total College Credits Earned" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:StaffEducationEntryDateShape
@@ -10655,7 +10655,7 @@ ceds:HoursWorkedPerWeekShape
   sh:path ceds:P000796 ;
   sh:name "Hours Worked Per Week" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:HourlyWageShape
@@ -10663,7 +10663,7 @@ ceds:HourlyWageShape
   sh:path ceds:P000797 ;
   sh:name "Hourly Wage" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasWageCollectionCodeShape
@@ -10695,7 +10695,7 @@ ceds:RequiredTrainingClockHoursShape
   sh:path ceds:P000804 ;
   sh:name "Required Training Clock Hours" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasStateIssuingProfessionalCredentialOrLicenseShape
@@ -10891,7 +10891,7 @@ ceds:NumberOfSchoolageEducationPostsecondaryCreditHoursShape
   sh:path ceds:P000816 ;
   sh:name "Number of School-age Education Postsecondary Credit Hours" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasHigherEducationInstitutionAccredidationStatusShape
@@ -14147,7 +14147,7 @@ ceds:LearnerActivityWeightShape
   sh:path ceds:P000951 ;
   sh:name "Learner Activity Weight" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:LearnerActivityPossiblePointsShape
@@ -14155,7 +14155,7 @@ ceds:LearnerActivityPossiblePointsShape
   sh:path ceds:P000952 ;
   sh:name "Learner Activity Possible Points" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:LearnerActivityRubricURLShape
@@ -14463,7 +14463,7 @@ ceds:QuarterlyEarningsShape
   sh:path ceds:P000989 ;
   sh:name "Quarterly Earnings" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasEmploymentLocationShape
@@ -15380,7 +15380,7 @@ ceds:AssessmentNeedVolumeShape
   sh:path ceds:P001029 ;
   sh:name "Assessment Need Volume" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:hasAssessmentNeedInvertColorChoiceShape
@@ -15399,7 +15399,7 @@ ceds:AssessmentNeedMagnificationShape
   sh:path ceds:P001031 ;
   sh:name "Assessment Need Magnification" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:hasAssessmentNeedBrailleGradeTypeShape
@@ -15451,7 +15451,7 @@ ceds:AssessmentNeedBrailleDotPressureShape
   sh:path ceds:P001036 ;
   sh:name "Assessment Need Braille Dot Pressure" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:hasAssessmentNeedBrailleStatusCellTypeShape
@@ -17843,7 +17843,7 @@ ceds:TotalApprovedEarlyChildhoodCreditsEarnedShape
   sh:path ceds:P001086 ;
   sh:name "Total Approved Early Childhood Credits Earned" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:AssessmentNeedPitchShape
@@ -17851,7 +17851,7 @@ ceds:AssessmentNeedPitchShape
   sh:path ceds:P001087 ;
   sh:name "Assessment Need Pitch" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:hasNAEPMathematicalComplexityLevelShape
@@ -18682,7 +18682,7 @@ ceds:LearningResourcePeerRatingValueShape
   sh:path ceds:P001148 ;
   sh:name "Learning Resource Peer Rating Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:PeerRatingSystemMaximumValueShape
@@ -18690,7 +18690,7 @@ ceds:PeerRatingSystemMaximumValueShape
   sh:path ceds:P001149 ;
   sh:name "Peer Rating System Maximum Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:PeerRatingSystemMinimumValueShape
@@ -18698,7 +18698,7 @@ ceds:PeerRatingSystemMinimumValueShape
   sh:path ceds:P001150 ;
   sh:name "Peer Rating System Minimum Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:PeerRatingSystemOptimumValueShape
@@ -18706,7 +18706,7 @@ ceds:PeerRatingSystemOptimumValueShape
   sh:path ceds:P001151 ;
   sh:name "Peer Rating System Optimum Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:AssessmentParticipantSessionPlatformUserAgentShape
@@ -19609,7 +19609,7 @@ ceds:SpecialEducationFTEShape
   sh:path ceds:P001242 ;
   sh:name "Special Education Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasProgramParticipationStatusShape
@@ -21019,7 +21019,7 @@ ceds:FinancialAccountingPeriodActualValueShape
   sh:path ceds:P001350 ;
   sh:name "Financial Accounting Period Actual Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FinancialAccountingPeriodBudgetedValueShape
@@ -21027,7 +21027,7 @@ ceds:FinancialAccountingPeriodBudgetedValueShape
   sh:path ceds:P001351 ;
   sh:name "Financial Accounting Period Budgeted Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FinancialAidIncomeLevelShape
@@ -21035,7 +21035,7 @@ ceds:FinancialAidIncomeLevelShape
   sh:path ceds:P001352 ;
   sh:name "Financial Aid Income Level" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasFinancialAccountBalanceSheetCodeShape
@@ -22507,7 +22507,7 @@ ceds:CompetencyAssociationWeightShape
   sh:path ceds:P001407 ;
   sh:name "Competency Association Weight" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 3 ;
+  ceds:fractionDigits 3 ;
 .
 
 ceds:hasCompetencyDefinitionNodeAccessibilityProfileShape
@@ -22758,7 +22758,7 @@ ceds:ProfessionalDevelopmentActivityCostShape
   sh:path ceds:P001435 ;
   sh:name "Professional Development Activity Cost" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasProfessionalDevelopmentActivityCreditTypeShape
@@ -22779,7 +22779,7 @@ ceds:ProfessionalDevelopmentActivityCreditsShape
   sh:path ceds:P001437 ;
   sh:name "Professional Development Activity Credits" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:ProfessionalDevelopmentActivityDescriptionShape
@@ -25450,7 +25450,7 @@ ceds:IndividualizedProgramPlannedServiceDurationShape
   sh:path ceds:P001520 ;
   sh:name "Individualized Program Planned Service Duration" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasReasonForDelayOfTransitionConferenceShape
@@ -25964,7 +25964,7 @@ ceds:CreditsRequiredShape
   sh:path ceds:P001574 ;
   sh:name "Credits Required" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTuitionFundedShape
@@ -34644,7 +34644,7 @@ ceds:FinancialAccountingPeriodEncumberedValueShape
   sh:path ceds:P001644 ;
   sh:name "Financial Accounting Period Encumbered Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FinancialAccountProgramNameShape
@@ -34668,7 +34668,7 @@ ceds:FinancialAccountingValueShape
   sh:path ceds:P001647 ;
   sh:name "Financial Accounting Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FinancialAccountingDateShape
@@ -35811,7 +35811,7 @@ ceds:GoalMeasurementCriterionAccuracyPercentShape
   sh:path ceds:P001691 ;
   sh:name "Goal Measurement Criterion Accuracy Percent" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:GoalMeasurementCriterionAttemptsCountShape
@@ -37435,7 +37435,7 @@ ceds:hasCTDLOrganizationTypeShape
   ) ;
 .
 
-ceds:hasO_NET-SOCOccupationTypeShape
+ceds:hasONET_SOCOccupationTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P001756 ;
   sh:name "Has O*NET-SOC Occupation Type" ;
@@ -37587,7 +37587,7 @@ ceds:FacilitySiteAreaShape
   sh:path ceds:P001773 ;
   sh:name "Facility Site Area" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 1 ;
+  ceds:fractionDigits 1 ;
 .
 
 ceds:FacilityBlockNumberAreaShape
@@ -37700,7 +37700,7 @@ ceds:FacilityReplacementValueShape
   sh:path ceds:P001784 ;
   sh:name "Facility Replacement Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BuildingNumberOfStoriesShape
@@ -38192,7 +38192,7 @@ ceds:hasBuildingDesignTypeShape
   ) ;
 .
 
-ceds:hasBuildingCareer-TechnicalEducationSpaceTypeShape
+ceds:hasBuildingCareer_TechnicalEducationSpaceTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P001817 ;
   sh:name "Has Building Career-Technical Education Space Type" ;
@@ -38392,7 +38392,7 @@ ceds:hasBuildingOutdoorAthleticOrPhysicalEducationSpaceTypeShape
   ) ;
 .
 
-ceds:hasBuildingOutdoorOrNon-athleticSpaceTypeShape
+ceds:hasBuildingOutdoorOrNon_athleticSpaceTypeShape
   a sh:PropertyShape ;
   sh:path ceds:P001826 ;
   sh:name "Has Building Outdoor or Non-athletic Space Type" ;
@@ -38636,7 +38636,7 @@ ceds:FacilityEstimatedCostToEliminateDeferredMaintenanceShape
   sh:path ceds:P001841 ;
   sh:name "Facility Estimated Cost to Eliminate Deferred Maintenance" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FacilityHazardousConditionExpectedRemediationDateShape
@@ -38697,12 +38697,12 @@ ceds:InstallationDateShape
   sh:datatype xsd:gYear ;
 .
 
-ceds:Life-cycleCostShape
+ceds:Life_cycleCostShape
   a sh:PropertyShape ;
   sh:path ceds:P001849 ;
   sh:name "Life-cycle Cost" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BuildingSiteImprovementDescriptionShape
@@ -38795,7 +38795,7 @@ ceds:BuildingNetAreaOfInstructionalSpaceShape
   sh:path ceds:P001857 ;
   sh:name "Building Net Area of Instructional Space" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:BuildingNumberOfTeachingStationsShape
@@ -38834,7 +38834,7 @@ ceds:BuildingSpaceUtilizationAreaShape
   sh:path ceds:P001861 ;
   sh:name "Building Space Utilization Area" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasStudentEnrollmentAccessTypeShape
@@ -39216,7 +39216,7 @@ ceds:FacilityLeaseAmountShape
   sh:path ceds:P001887 ;
   sh:name "Facility Lease Amount" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasFacilityLeaseAmountCategoryShape
@@ -39250,7 +39250,7 @@ ceds:FacilityMortgageInterestAmountShape
   sh:path ceds:P001890 ;
   sh:name "Facility Mortgage Interest Amount" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasFacilityMortgageInterestTypeShape
@@ -39290,7 +39290,7 @@ ceds:IndebtednessAmountAllowedShape
   sh:path ceds:P001893 ;
   sh:name "Indebtedness Amount Allowed" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:InsuranceDeductibleShape
@@ -39298,7 +39298,7 @@ ceds:InsuranceDeductibleShape
   sh:path ceds:P001894 ;
   sh:name "Insurance Deductible" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:PublicEducationMillRateShape
@@ -39306,7 +39306,7 @@ ceds:PublicEducationMillRateShape
   sh:path ceds:P001895 ;
   sh:name "Public Education Mill Rate" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 8 ;
+  ceds:fractionDigits 8 ;
 .
 
 ceds:FacilityTotalAssessedValueShape
@@ -39314,7 +39314,7 @@ ceds:FacilityTotalAssessedValueShape
   sh:path ceds:P001896 ;
   sh:name "Facility Total Assessed Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasCampusTypeShape
@@ -39556,7 +39556,7 @@ ceds:FullTimeEquivalencyShape
   sh:path ceds:P001921 ;
   sh:name "Full Time Equivalency" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasProgramEntryReasonShape
@@ -39781,7 +39781,7 @@ ceds:CohortMedianEarningsShape
   sh:path ceds:P001938 ;
   sh:name "Cohort Median Earnings" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasAdultEducationProgramExitReasonShape
@@ -39870,19 +39870,21 @@ ceds:hasRaceAndEthnicityShape
     ceds:NI001943928202    # Multiracial and/or Multiethnic
     ceds:NI001943928204    # Middle Eastern or North African
   ) ;
+.
+
+ceds:RaceAndEthnicityMutualExclusionShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf ceds:P001943 ;
   sh:xone (
     [
       # Exclusive single-select values — cannot be combined with specific races.
-      # "Unknown" and deprecated "Two or More Races" mean the reporter cannot
-      # also assert specific races; "Multiracial/Multiethnic" is a roll-up that
-      # supersedes listing individual races in V14.
       a sh:PropertyShape ;
       sh:path ceds:P001943 ;
       sh:nodeKind sh:IRI ;
       sh:maxCount 1 ;
       sh:in (
-        ceds:NI001943162282    # Race and Ethnicity Unknown
         ceds:NI001943162280    # (Deprecated) Demographic Race Two or More Races
+        ceds:NI001943162282    # Race and Ethnicity Unknown
         ceds:NI001943928202    # Multiracial and/or Multiethnic
       )
     ]
@@ -39891,6 +39893,7 @@ ceds:hasRaceAndEthnicityShape
       a sh:PropertyShape ;
       sh:path ceds:P001943 ;
       sh:nodeKind sh:IRI ;
+      sh:minCount 1 ;
       sh:in (
         ceds:NI001943162277    # American Indian or Alaska Native
         ceds:NI001943162278    # Asian
@@ -39899,10 +39902,10 @@ ceds:hasRaceAndEthnicityShape
         ceds:NI001943162283    # White
         ceds:NI001943162284    # Hispanic or Latino
         ceds:NI001943928204    # Middle Eastern or North African
-      ) ;
-      sh:minCount 1
+      )
     ]
-  ) .
+  ) ;
+.
 
 ceds:hasFederalRaceAndEthnicityDeclinedShape
   a sh:PropertyShape ;
@@ -40028,7 +40031,7 @@ ceds:NumberofDaysTardyShape
   sh:path ceds:P001957 ;
   sh:name "Number of Days Tardy" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasStaffCompensationSourceTypeShape
@@ -40048,7 +40051,7 @@ ceds:StaffCompensationAnnualSupplementShape
   sh:path ceds:P001959 ;
   sh:name "Staff Compensation Annual Supplement" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:StaffCompensationLongevityShape
@@ -40056,7 +40059,7 @@ ceds:StaffCompensationLongevityShape
   sh:path ceds:P001960 ;
   sh:name "Staff Compensation Longevity" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasEDFactsTeacherInexperiencedStatusShape
@@ -40592,7 +40595,7 @@ ceds:AttendanceEventDurationMinutesShape
   sh:path ceds:P002014 ;
   sh:name "Attendance Event Duration Minutes" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:AttendanceEventDurationHoursShape
@@ -40600,7 +40603,7 @@ ceds:AttendanceEventDurationHoursShape
   sh:path ceds:P002015 ;
   sh:name "Attendance Event Duration Hours" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasDEIPolicyIndicatorShape
@@ -40777,7 +40780,7 @@ ceds:hasProjectedHighSchoolDiplomaTypeShape
   ) ;
 .
 
-ceds:LearningResourceIdentifierShape
+ceds:LearningResourceIdentifierShape2
   a sh:PropertyShape ;
   sh:path ceds:P002027 ;
   sh:name "Learning Resource Identifier" ;
@@ -41336,7 +41339,7 @@ ceds:FundingSourcePercentageShape
   sh:path ceds:P002058 ;
   sh:name "Funding Source Percentage" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:FundingSourceAmountShape
@@ -41352,7 +41355,7 @@ ceds:YearsOfTotalExperienceShape
   sh:path ceds:P002060 ;
   sh:name "Years of Total Experience" ;
   sh:datatype xsd:int ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:YearsOfPriorProfessionalExperienceShape
@@ -41360,7 +41363,7 @@ ceds:YearsOfPriorProfessionalExperienceShape
   sh:path ceds:P002061 ;
   sh:name "Years of Prior Professional Experience" ;
   sh:datatype xsd:int ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasTeenParentIndicatorShape
@@ -41380,7 +41383,7 @@ ceds:OrganizationJurisdictionSquareMilesShape
   sh:path ceds:P002063 ;
   sh:name "Organization Jurisdiction Square Miles" ;
   sh:datatype xsd:int ;
-  sh:fractionDigits 4 ;
+  ceds:fractionDigits 4 ;
 .
 
 ceds:StaffCompensationAnnualSupplementDescriptionShape
@@ -41816,7 +41819,7 @@ ceds:AttendanceEventDurationDayShape
   sh:path ceds:P002098 ;
   sh:name "Attendance Event Duration Day" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:InstructionalMinutesPerDayShape
@@ -41909,7 +41912,7 @@ ceds:SalaryScheduleSalaryValueShape
   sh:path ceds:P002109 ;
   sh:name "Salary Schedule Salary Value" ;
   sh:datatype xsd:decimal ;
-  sh:fractionDigits 2 ;
+  ceds:fractionDigits 2 ;
 .
 
 ceds:hasIncidentActivityShape
@@ -43834,4 +43837,3 @@ ceds:usageURLShape
   sh:name "Usage URL" ;
   sh:datatype xsd:anyURI ;
 .
-
